@@ -40,4 +40,10 @@ function adjacentElementsProduct(inputArray) {
 
 // Given an array of strings, return another array containing all of its longest strings.
 
-function allLongestStrings(inputArray) {};
+function allLongestStrings(inputArray) {
+  let longestWordArray = [];
+  inputArray.sort(function (a, b) {
+    return b.length - a.length;
+  });
+  return inputArray.filter((word) => word.length == inputArray[0].length)
+}
