@@ -7,19 +7,19 @@ function commonCharacterCount(s1, s2) {
   let objS1 = {};
   let objS2 = {};
   s1.map((char) => {
-    if (objS1[char] == undefined) {
+    if (objS1[char] === undefined) {
       objS1[char] = 1;
     } else {
       objS1[char]++;
     }
-  })
+  });
   s2.map((char) => {
-    if (objS2[char] == undefined) {
+    if (objS2[char] === undefined) {
       objS2[char] = 1;
     } else {
       objS2[char]++;
     }
-  })
+  });
   for (let prop in objS1) {
     if (objS2.hasOwnProperty(prop) === true) {
       if (objS2[prop] < objS1[prop]) {
@@ -31,5 +31,3 @@ function commonCharacterCount(s1, s2) {
   }
   return count;
 }
-
-
