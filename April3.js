@@ -13,5 +13,26 @@ function orderedWords(words) {
       }
     }
   }
-  return sortedArray;
+  return sortedArray.join(' ');
 }
+
+// Bob is preparing to pass IQ test. The most frequent task in this test is to find out which one of the given numbers differs from the others. Bob observed that one number usually differs from the others in evenness. Help Bob — to check his answers, he needs a program that among the given numbers finds one that is different in evenness, and return a position of this number.
+
+function iqTest(numbers) {
+  let evenNumbers = [];
+  let oddNumbers = [];
+  numbers = numbers.split(' ');
+  numbers.map((elem) => {
+    if (elem % 2 === 0) {
+      evenNumbers.push(elem);
+    } else {
+      oddNumbers.push(elem);
+    }
+  });
+  if (evenNumbers.length > oddNumbers.length) {
+    return numbers.indexOf(oddNumbers[0]);
+  }
+  return numbers.indexOf(evenNumbers[0]);
+}
+
+
