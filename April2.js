@@ -27,4 +27,3 @@ function sortByHeight(array) {
   }
   return array;
 }
-
