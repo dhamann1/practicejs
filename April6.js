@@ -17,3 +17,11 @@ function findOutlier(integers) {
     return evenArray[0];
   }
 }
+//Create a digital root function.
+
+function digitalRoot(n) {
+  while (n > 10) {
+    n = n.toString().split('').map(elem => Number(elem)).reduce((a, b) => a + b);
+  }
+  return n;
+}
