@@ -20,3 +20,18 @@ function longestConsec(strarr, k) {
   }
   return longest;
 }
+
+// Implement the function uniqueInOrder which takes as argument a sequence and returns a list of items without any elements with the same value next to each other and preserving the original order of elements.
+
+function uniqueInOrder(iterable) {
+  let result = [];
+  let last;
+  for (let i = 0; i < iterable.length; i++) {
+    if (iterable[i] !== last) {
+      result.push(last = iterable[i]);
+    }
+  }
+  return result;
+}
+
+
