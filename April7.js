@@ -6,3 +6,17 @@ function spinWords(words) {
   }).join(' ');
 }
 
+
+// You are given an array strarr of strings and an integer k. Your task is to return the first longest string consisting of k consecutive strings taken in the array.
+
+function longestConsec(strarr, k) {
+  let longest = "";
+  for (let i = 0; k > 0 && i <= strarr.length - k; i++) {
+    let tempArray = strarr.slice(i, i + k);
+    let tempStr = tempArray.join("");
+    if (tempStr.length > longest.length) {
+      longest = tempStr;
+    }
+  }
+  return longest;
+}
