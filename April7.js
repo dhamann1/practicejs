@@ -79,3 +79,25 @@ function whoLikes(names) {
       break;
   }
 }
+
+
+// Write a function that will return the count of distinct case-insensitive alphabetic characters and numeric digits that occur more than once in the input string. The input string can be assumed to contain only alphabets (both uppercase and lowercase) and numeric digits.
+
+function duplicateCount(text) {
+  let splitString = text.toLowerCase().split('');
+  let numObj = {};
+  for (let i in splitString) {
+    if (!numObj[splitString[i]]) {
+      numObj[splitString[i]] = 1;
+    } else {
+      numObj[splitString[i]] += 1;
+    }
+  }
+  let result = 0;
+  for (let prop in numObj) {
+    if (numObj[prop] > 1) {
+      result++;
+    }
+  }
+  return result;
+}
