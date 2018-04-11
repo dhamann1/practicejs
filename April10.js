@@ -8,7 +8,6 @@
 // reverseParentheses(s) = "acbde".
 
 function reverseParentheses(s) {
-
   while (s.indexOf(')', 0) != -1) {
     let c = s.indexOf(')', 0);
     let a = s.lastIndexOf('(', c);
@@ -17,4 +16,42 @@ function reverseParentheses(s) {
 
   }
   return s;
+}
+
+// Your task is to clean up differently formatted telephone numbers by removing punctuation and the country code (1) if present.
+
+// For example, the inputs
+
+// +1 (613)-995-0253
+// 613-995-0253
+// 1 613 995 0253
+// 613.995.0253
+// should all produce the output
+
+// 6139950253
+
+
+function cleanNumber(pNumber) {
+  let num = pNumber.replace(/\D/g, '');
+  if (num.length === 10 && num[0] >= 2 && num[3] >= 2) {
+    return num;
+  } else if (num.length === 11 && num[0] === '1') {
+    return num.substr(1, num.length);
+  }
+  return null;
+}
+
+// You are given an array of positive integers - the weights of the people. Return an array of two integers, where the first element is the total weight of team 1, and the second element is the total weight of team 2 after the division is complete.
+
+function alternatingSums(a) {
+  let team1 = 0;
+  let team2 = 0;
+  for (let i = 0; i < a.length; i++) {
+    if (i % 2 == 0) {
+      team1 += a[i];
+    } else {
+      team2 += a[i];
+    }
+  }
+  return [team1, team2];
 }
