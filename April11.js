@@ -37,3 +37,20 @@ function arrayChange(inputArray) {
   }
   return count;
 }
+
+// Given a string, find out if its characters can be rearranged to form a palindrome.
+
+function palindromeRearranging(inputString) {
+  let numObj = {};
+  let oddCount = 0;
+  inputString = inputString.split('').map(char => numObj[char] ? numObj[char]++ : numObj[char] = 1)
+  for (let key in numObj) {
+    if (numObj[key] % 2 === 1) {
+      oddCount++;
+    }
+  }
+  if (oddCount > 1) {
+    return false;
+  }
+  return true;
+}
