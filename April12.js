@@ -18,3 +18,17 @@ function avoidObstacles(inputArray) {
     }
   }
 }
+
+// You are given an n x n 2D matrix that represents an image. Rotate the image by 90 degrees (clockwise).
+
+function rotateImage(a) {
+  let arr = [];
+  for (let i = 0; i < a.length; i++) {
+    arr.push([]);
+    for (let d = a.length - 1; d >= 0; d--) {
+      arr[i].push(a[d][i]);
+    }
+  }
+  return arr;
+}
+
