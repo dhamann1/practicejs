@@ -9,3 +9,14 @@ function breakCamelCase(string) {
   })
   return string.join('');
 }
+
+
+// Move the first letter of each word to the end of it, then add "ay" to the end of the word. Leave punctuation marks untouched.
+
+function pigIt(str) {
+  let splitStr = str.split(' ').map(word => {
+    word = word.slice(1, word.length) + word[0] + "ay";
+    return word;
+  }).join(' ');
+  return splitStr;
+}
