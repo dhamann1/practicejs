@@ -35,3 +35,14 @@ function luckCheck(ticket) {
   let right = ticket.split('').splice((length % 2 === 0 ? length / 2 : length / 2 + 1), length).map(elem => Number(elem));
   return left.reduce((a, b) => +a + +b) === right.reduce((a, b) => +a + +b);
 }
+
+// Write a function toWeirdCase (weirdcase in Ruby) that accepts a string, and returns the same string with all even indexed characters in each word upper cased, and all odd indexed characters in each word lower cased. The indexing just explained is zero based, so the zero-ith index is even, therefore that character should be upper cased.
+
+
+function toWeirdCase(string) {
+  return string.split(' ').map(function (word) {
+    return word.split('').map(function (letter, index) {
+      return index % 2 == 0 ? letter.toUpperCase() : letter.toLowerCase()
+    }).join('');
+  }).join(' ');
+}
