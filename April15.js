@@ -26,3 +26,12 @@ function largestDifference(data) {
   }
   return largeDiff;
 }
+
+// A transport ticket of any sort was believed to posess luck if sum of digits on the left half of its number was equal to the sum of digits on the right half. Your task is to write a funtion luck_check(str), which returns true/True if argument is string decimal representation of a lucky ticket number, or false/False for all other numbers. 
+
+function luckCheck(ticket) {
+  let length = ticket.length;
+  let left = ticket.split('').splice(0, length / 2).map(elem => Number(elem));
+  let right = ticket.split('').splice((length % 2 === 0 ? length / 2 : length / 2 + 1), length).map(elem => Number(elem));
+  return left.reduce((a, b) => +a + +b) === right.reduce((a, b) => +a + +b);
+}
