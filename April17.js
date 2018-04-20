@@ -32,3 +32,15 @@ function getLengthOfMissingArray(arrayOfArrays) {
   }
   return 0;
 }
+
+// Create a function named divisors/Divisors that takes an integer and returns an array with all of the integer's divisors(except for 1 and the number itself). If the number is prime return the string '(integer) is prime' 
+
+function divisors(integer) {
+  let numArray = [];
+  for (let i = 0; i < integer; i++) {
+    if (i !== 1 && i !== integer && integer % i == 0) {
+      numArray.push(i);
+    }
+  }
+  return numArray.length > 0 ? numArray : integer + ' is prime';
+};
