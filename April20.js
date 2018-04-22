@@ -57,3 +57,20 @@ function stringTransformer(str) {
   }).join('').split(' ').reverse().join(' ');
   return splitStr;
 }
+
+
+// There's no such thing as private properties on a coffeescript object! But, maybe there are?
+
+// Implement a function createSecretHolder(secret) which accepts any value as secret and returns an object with ONLY two methods
+
+function createSecretHolder(secret) {
+  let newSecret = secret;
+  return {
+    setSecret: function (s) {
+      newSecret = s;
+    },
+    getSecret: function () {
+      return newSecret;
+    }
+  };
+}
