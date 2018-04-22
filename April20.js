@@ -41,3 +41,19 @@ function beggars(values, n) {
   }
   return outputValues;
 }
+
+
+// Given a string, return a new string that has transformed based on the input:
+
+// Change case of every character, ie. lower case to upper case, upper case to lower case.
+// Reverse the order of words from the input.
+
+function stringTransformer(str) {
+  let splitStr = str.split('').map(letter => {
+    if (letter === letter.toLowerCase()) {
+      return letter.toUpperCase()
+    }
+    return letter.toLowerCase();
+  }).join('').split(' ').reverse().join(' ');
+  return splitStr;
+}
