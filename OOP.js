@@ -40,9 +40,7 @@ function Teacher(first, last, age, gender, interests, subject) {
   this.subject = subject;
 }
 
-/* A simple substitution cipher replaces one character from an alphabet with
-a character from an alternate alphabet, where each character's position in an
- alphabet is mapped to the alternate alphabet for encoding or decoding. */
+// A simple substitution cipher replaces one character from an alphabet with a character from an alternate alphabet, where each character's position in an alphabet is mapped to the alternate alphabet for encoding or decoding.
 
 let abc1 = "abcdefghijklmnopqrstuvwxyz";
 let abc2 = "etaoinshrdlucmfwypvbgkjqxz";
@@ -58,4 +56,15 @@ function SubstitutionCipher(abc1, abc2) {
       return elem = abc1[abc2.indexOf(elem)];
     }).join('');
   }
+}
+
+// You are given a complex object that has many deeply nested variables. You don't want to go the usual if obj.property == null route. Create a prototype method that given a nested path, either return the value or undefined.
+
+Object.prototype.hash = function(string) {
+  let current = this;
+  let props = string.split('.');
+  while (current && props.length) {
+    current = current[props.shift()];
+  }
+  return current;
 }
