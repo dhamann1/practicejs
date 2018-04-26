@@ -12,3 +12,16 @@ function narcissistic(value) {
   let returnValue = newValue.map(num => Math.pow(Number(num), newValue.length)).reduce((a, b) => a + b);
   return returnValue === value;
 }
+
+Build Tower by the following given argument:
+  number of floors(integer and always greater than 0).
+
+function towerBuilder(nFloors) {
+  let tower = [];
+  for (var i = 0; i < nFloors; i++) {
+    tower.push(" ".repeat(nFloors - i - 1) +
+      "*".repeat((i * 2) + 1) +
+      " ".repeat(nFloors - i - 1));
+  }
+  return tower;
+}
