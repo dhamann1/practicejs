@@ -27,3 +27,20 @@ function isAlt(word) {
   }
   return true;
 }
+
+// Write a method that takes an array of consecutive (increasing) letters as input and that returns the missing letter in the array.
+
+// You will always get an valid array. And it will be always exactly one letter be missing. The length of the array will always be at least 2.
+// The array will always contain letters in only one case.
+
+function findMissingLetter(array) {
+  let abc = "abcdefghijklmnopqrstuvwxyz";
+  let startingPoint = abc.indexOf(array[0].toLowerCase());
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].toLowerCase() === abc[startingPoint]) {
+      startingPoint += 1;
+    } else {
+      return array[0] == array[0].toUpperCase() ? abc[startingPoint].toUpperCase() : abc[startingPoint];
+    }
+  }
+}
