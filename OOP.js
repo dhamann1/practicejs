@@ -93,3 +93,26 @@ function splitTheBill(x) {
   }
   return newObj;
 }
+
+
+
+
+
+
+
+
+
+function Person(first, last, age, gender, interests) {
+  this.name = {
+    first,
+    last
+  };
+  this.age = age;
+  this.gender = gender;
+  this.interests = interests;
+};
+
+
+var teacher = new Person("Dean", "Hamann", 27, "Male", "Swimming");
+
+console.log(teacher._proto_);
