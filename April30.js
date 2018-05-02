@@ -54,3 +54,16 @@ function goodVsEvil(good, evil) {
     return "Battle Result: Evil eradicates all trace of Good";
   }
 }
+
+// create a function, which returns an array of functions, which return their index in the array.
+
+function createFunctions(n) {
+  var callbacks = [];
+  for (var i = 0; i < n; i++) {
+    var m = 0;
+    callbacks.push(function() {
+      return m++;
+    });
+  }
+  return callbacks;
+}
