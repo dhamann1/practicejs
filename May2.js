@@ -32,3 +32,27 @@ arr.forEach(elem => {
 })
   return count;
 }
+
+
+// You've just discovered a square (NxN) field and you notice a warning sign. The sign states that there's a single bomb in the 2D grid-like field in front of you.
+// Write a function mineLocation/MineLocation that accepts a 2D array, and returns the location of the mine. The mine is represented as the integer 1 in the 2D array. Areas in the 2D array that are not the mine will be represented as 0s.
+function mineLocation(field) {
+  for (let a = 0; a < field.length; a++) {
+    for (let b = 0; b < field[a].length; b++) {
+      if (field[a][b] === 1) {
+        return [a, b];
+      } else {
+        return 'No mine';
+      }
+    }
+  }
+}
+
+Given two arrays of strings a1 and a2 return a sorted array r in lexicographical order of the strings of a1 which are substrings of strings of a2.
+
+function inArray(a1, a2) {
+  let str = a2.join(' ');
+  return a1.filter(function(word){
+    return str.indexOf(word) !== -1;
+  }).sort();
+}
