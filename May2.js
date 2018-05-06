@@ -56,3 +56,12 @@ function inArray(a1, a2) {
     return str.indexOf(word) !== -1;
   }).sort();
 }
+
+// Given a number, return a string with dash'-'marks before and after each odd integer, but do not begin or end the string with a dash mark.
+
+function dashatize(num) {
+  return String(num)
+    .replace(/([13579])/g, "-$1-")
+    .replace(/--+/g, "-")
+    .replace(/(^-|-$)/g, "")
+}
