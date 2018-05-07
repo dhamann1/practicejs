@@ -11,7 +11,7 @@ function splitStrings(str) {
 
 //better solution:
 
-function splitS (str){
+function splitS(str) {
   return (str + "_").match(/../g);
 }
 
@@ -23,13 +23,13 @@ function splitS (str){
 // No additional characters are allowed except for those mentioned.
 
 function countSmileys(arr) {
-let smileys = [":)",";)",":-)",";-)",";~)",":~)",":D",";D",":-D",":~D",";-D",";~D"];
-let count = 0;
-arr.forEach(elem => {
-  if(smileys.includes(elem)){
-    count++;
-  }
-})
+  let smileys = [":)", ";)", ":-)", ";-)", ";~)", ":~)", ":D", ";D", ":-D", ":~D", ";-D", ";~D"];
+  let count = 0;
+  arr.forEach(elem => {
+    if (smileys.includes(elem)) {
+      count++;
+    }
+  })
   return count;
 }
 
@@ -48,11 +48,12 @@ function mineLocation(field) {
   }
 }
 
-Given two arrays of strings a1 and a2 return a sorted array r in lexicographical order of the strings of a1 which are substrings of strings of a2.
+Given two arrays of strings a1 and a2
+return a sorted array r in lexicographical order of the strings of a1 which are substrings of strings of a2.
 
 function inArray(a1, a2) {
   let str = a2.join(' ');
-  return a1.filter(function(word){
+  return a1.filter(function (word) {
     return str.indexOf(word) !== -1;
   }).sort();
 }
@@ -64,4 +65,23 @@ function dashatize(num) {
     .replace(/([13579])/g, "-$1-")
     .replace(/--+/g, "-")
     .replace(/(^-|-$)/g, "")
+}
+
+// Write a function that takes an integer and returns an array [A, B, C], where A is the number of multiples of 3 (but not 5) less than the given integer, B is the number of multiples of 5 (but not 3) less than the given integer and C is the number of multiples of 3 and 5 less than the given integer.
+
+function solutionFizzBuzz(number) {
+  let A = 0;
+  let B = 0;
+  let C = 0;
+  let solutionArr = [];
+  for (let i = 1; i < number; i++) {
+    if (i % 3 === 0 && i % 5 === 0) {
+      C++;
+    } else if (i % 3 == 0) {
+      A++;
+    } else if (i % 5 == 0) {
+      B++;
+    }
+  }
+  return solutionArr.push(A, B, C);
 }
