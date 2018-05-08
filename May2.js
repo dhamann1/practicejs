@@ -85,3 +85,26 @@ function solutionFizzBuzz(number) {
   }
   return solutionArr.push(A, B, C);
 }
+
+// Your Task
+// Return the name of the winner. If there is no winner, return null (in Java and JavaScript), None (in Python) or nil (in Ruby).
+// Task Description
+// There are no given candidates. An elector can vote for anyone. Each ballot contains only one name and represents one vote for this name. A name is an arbitrary string, e.g. "A", "B", or "XJDHD".
+
+// There are no spoiled ballots.
+
+// The ballot-box is represented by an unsorted list of names. Each entry in the list corresponds to one vote for this name. You do not know the names in advance (because there are no candidates).
+
+// A name wins the election if it gets more than n/2 votes (n = number of all votes, i.e. n is equal to the size of the given list).
+
+function getWinner(list) {
+  let result = {};
+  let winNumber = list.length / 2;
+  list.forEach(function (char) {
+    ++result[char] || (result[char] = 1);
+  });
+  let answer = Object.keys(result).filter(function (key) {
+    if (result[key] > winNumber) return key;
+  });
+  return answer[0] || null;
+}
