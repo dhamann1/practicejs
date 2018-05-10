@@ -108,3 +108,13 @@ function getWinner(list) {
   });
   return answer[0] || null;
 }
+
+// Write a small function that returns the values of an array that are not odd.
+
+// All values in the array will be integers. Return the good values in the order they are given.
+
+function noOdds( values ){
+  return values.filter(function(number){
+    return number % 2 === 0
+  });
+}
