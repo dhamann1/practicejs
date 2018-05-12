@@ -109,6 +109,7 @@ function getWinner(list) {
   return answer[0] || null;
 }
 
+<<<<<<< HEAD
 // Write a small function that returns the values of an array that are not odd.
 
 // All values in the array will be integers. Return the good values in the order they are given.
@@ -128,3 +129,12 @@ function endsWith(str, ending){
   return str.endsWith(ending);
 }
 
+=======
+// Write a function that receives two strings and returns n, where n is equal to the number of characters we should shift the first string forward to match the second.
+// For instance, take the strings "fatigue" and "tiguefa". In this case, the first string has been rotated 5 characters forward to produce the second string, so 5 would be returned.
+// If the second string isn't a valid rotation of the first string, the method returns -1.
+
+function shiftedDiff(first, second) {
+  return (first.length == second.length) ? (second + second).indexOf(first) : -1;
+}
+>>>>>>> 30d1713b98d4368cdacaecd8649d0a543afb5304
