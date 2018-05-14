@@ -12,8 +12,27 @@ function peopleBus(busStops) {
 // Your friend has troubles with users ending or starting in a ".", and his user-array is a flat array of user-email-pairs.
 // He is only interested in e-mailing the users and ask them to sign up again, so no need to keep the user-name, only e-mail addresses for the user-names that start or end with a "." should be returned. You have to use the filter-method of Javascript.
 
-function searchNames( logins ){
-  return logins.filter(function(value, index, arr) {
+function searchNames(logins) {
+  return logins.filter(function (value, index, arr) {
     return index % 2 === 1 && arr[index - 1].match(/^\.|\.$/);
   });
+}
+
+// Modify the kebabize function so that it converts a camel case string into a kebab 
+
+function kebabize(str) {
+  let removeNums = str.replace(/[0-9]/g, '');
+  let strArr = removeNums.split('');
+  let camelArray = [];
+  for (let i = 0; i < strArr.length; i++) {
+    if (strArr[i] === strArr[i].toUpperCase()) {
+      if (i !== 0) {
+        camelArray.push('-');
+      }
+      camelArray.push(strArr[i].toLowerCase());
+    } else {
+      camelArray.push(strArr[i]);
+    }
+  }
+  return camelArray.join('');
 }
