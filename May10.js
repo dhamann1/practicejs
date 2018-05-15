@@ -36,3 +36,30 @@ function kebabize(str) {
   }
   return camelArray.join('');
 }
+
+// Your task is to write a function that does just what the title suggests (so, fair warning, be aware that you are not getting out of it just throwing a lame bas sorting method there) with an array/list/vector of integers and the expected number n of smallest elements to return.
+
+// Also:
+
+// the number of elements to be returned cannot be higher than the array/list/vector length;
+// elements can be duplicated;
+// in case of duplicates, just return them according to the original order (see third example for more clarity).
+
+
+function firstNSmallest(array, n) {
+  let a = array.slice();
+  let small = [];
+  let result = [];
+  a.sort();
+
+  for (let i = 0; i < n; i++) {
+    small.push(a[i]);
+  }
+  for (let i = 0; i < array.length; i++) {
+    if (small.includes(array[i])) {
+      result.push(array[i]);
+      small.splice(small.indexOf(array[i]), 1);
+    }
+  }
+  return result;
+}
