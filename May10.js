@@ -18,7 +18,7 @@ function searchNames(logins) {
   });
 }
 
-// Modify the kebabize function so that it converts a camel case string into a kebab 
+// Modify the kebabize function so that it converts a camel case string into a kebab
 
 function kebabize(str) {
   let removeNums = str.replace(/[0-9]/g, '');
@@ -110,4 +110,17 @@ function same(a, b) {
   a = a.map((v) => v.sort()).sort().join();
   b = b.map((v) => v.sort()).sort().join();
   return a === b;
+}
+
+// You're working in a number zoo, and it seems that one of the numbers has gone missing!
+// Zoo workers have no idea what number is missing, and are too incompetent to figure it out, so they're hiring you to do it for them.
+// In case the zoo loses another number, they want your program to work regardless of how many numbers the zoo has in total.
+// Write the function findNumber(array) that takes an array of numbers. The numbers will be unsorted values between 1 and one more than the length of the array. No values will be repeated within the array. Return the number that is missing.
+
+function findNumber(arr) {
+  for (let i = 1; i <= arr.length; i++) {
+    if (!arr.includes(i)) {
+      return i;
+    }
+  }
 }
