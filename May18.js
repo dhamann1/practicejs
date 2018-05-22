@@ -19,3 +19,23 @@ var nbrOfLaps = function (x, y) {
 
   return [aSteps, bSteps];
 }
+
+// You are given a list/array which contains only integers (positive and negative). Your job is to sum only the numbers that are the same and consecutive. The result should be one list.
+// Extra credit if you solve it in one line. You can asume there is never an empty list/array and there will always be an integer.
+// Same meaning: 1 == 1
+// 1 != -1
+
+
+
+function sumConsecutives(s) {
+    let sum = 0,
+    sums = [];
+    for( let i = 0; i < s.length; i++){
+      sum += s[i];
+      if(s[i] != s[i+1]){
+        sums.push(sum);
+        sum = 0;
+      }
+    }
+    return sums;
+}
