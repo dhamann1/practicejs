@@ -39,3 +39,19 @@ function sumConsecutives(s) {
     }
     return sums;
 }
+
+
+
+// In this Kata, you will be given an array of integers and your task is to return the number of arithmetic progressions of size 3 that are possible from that list. In each progression, the differences between the elements must be the same.
+
+
+function arithmeticProgressions(arr){
+ let result = 0;
+ for (let i = 0; i < arr.length; i++){
+   for (let j = i + 1; j < arr.length; j++){
+     if (arr.indexOf(2 * arr[j] - arr[i]) > 0) result ++;
+   }
+ }
+
+ return result;
+}
