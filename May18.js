@@ -61,7 +61,15 @@ function foldArray(array, runs) {
   if (!runs) return array;
   let result = [];
   for (let i = 0; i < Math.ceil(array.length / 2); i++) {
-    result[i] = array.length -i - 1 === i ? array[i] : array[i] + array[array.length - i - 1];
+    result[i] = array.length - i - 1 === i ? array[i] : array[i] + array[array.length - i - 1];
   }
   return foldArray(result, runs - 1);
 }
+
+
+
+const toHours = (i) => Math.floor(i / 60);
+const setDigits = (i) => i < 10 ? `0${i}` : i;
+const getTime = (i) => [toHours(i), i % 60];
+const toTime = (arr) => `${arr[0]}:${setDigits(arr[1])}`;
+const minutes = (i) => toTime(getTime(i));
