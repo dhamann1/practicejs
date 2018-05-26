@@ -83,3 +83,27 @@ function race(v1, v2, g) {
   let time = g / (v2 - v1);
   return v2 > v1 ? [Math.floor(time), Math.floor(time * 60 % 60), Math.floor(time * 3600 % 60)] : null;
 }
+
+// In English and programming, groups can be made using symbols such as () and {} that change meaning. However, these groups must be closed in the correct order to maintain correct syntax.
+// Make a program that checks a string for correct grouping.
+
+function groupCheck(s) {
+  var brackets = {
+    "(": ")",
+    "{": "}",
+    "[": "]"
+  }
+  var stack = []
+
+  for (var c of s) {
+    if (c in brackets) {
+      stack.push(c)
+    } else if (brackets[stack[stack.length - 1]] == c) {
+      stack.pop()
+    } else {
+      return false
+    }
+  }
+
+  return stack.length == 0
+}
