@@ -25,21 +25,38 @@ function minimumNumber(numbers) {
 
 Freddy has a really fat left pinky finger, and every time Freddy tries to type an A, he accidentally hits the CapsLock key!
 
-// Given a string that Freddy wants to type, emulate the keyboard misses where each A supposedly pressed is replaced with CapsLock, and return the string that Freddy actually types. It doesn't matter if the A in the string is capitalized or not. When CapsLock is enabled, capitalization is reversed, but punctuation is not affected.
+  // Given a string that Freddy wants to type, emulate the keyboard misses where each A supposedly pressed is replaced with CapsLock, and return the string that Freddy actually types. It doesn't matter if the A in the string is capitalized or not. When CapsLock is enabled, capitalization is reversed, but punctuation is not affected.
 
-var fatFingers = function(str) {
-  if (!str) return str;
-  let isCapsLocked = false;
-  let result = str.split('').reduce(function(acc, char) {
-    if (char.toUpperCase() === 'A') {
-      isCapsLocked = !isCapsLocked;
+  var fatFingers = function(str) {
+    if (!str) return str;
+    let isCapsLocked = false;
+    let result = str.split('').reduce(function(acc, char) {
+      if (char.toUpperCase() === 'A') {
+        isCapsLocked = !isCapsLocked;
+        return acc;
+      }
+      if (isCapsLocked) {
+        char = char === char.toUpperCase() ? char.toLowerCase() : char.toUpperCase();
+      }
+      acc += char;
       return acc;
-    }
-    if (isCapsLocked) {
-      char = char === char.toUpperCase() ? char.toLowerCase() : char.toUpperCase();
-    }
-    acc += char;
-    return acc;
-  }, '');
-  return result;
-};
+    }, '');
+    return result;
+  };
+
+
+
+// given a string with brackets and an index of an opening bracket and your task will be to return the index of the matching closing bracket. Both the input and returned index are 0-based except in Fortran where it is 1-based. An opening brace will always have a closing brace. Return -1 if there is no answer
+
+function bracketFinder(str, idx) {
+  if (str[idx] != '(') return -1
+  let count = 1
+  for (let i = idx + 1; i <= str.length; i++) {
+    if (count == 0)
+      return i - 1
+    if (str[i] == '(')
+      count += 1
+    if (str[i] == ')')
+      count -= 1
+  }
+}
