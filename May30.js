@@ -76,3 +76,14 @@ function alphabetized(s) {
   });
   return results;
 }
+
+// Given a positive integer of up to 16 digits, return true if it is a valid credit card number, and false if it is not.
+
+function validate(n) {
+  n = n.toString().split('').map(Number).reverse();
+  return n.reduce(function(sum, digit, index) {
+    if (index & 1) digit <<= 1;
+    if (digit > 9) digit -= 9;
+    return sum + digit;
+  }, 0) % 10 == 0;
+}
