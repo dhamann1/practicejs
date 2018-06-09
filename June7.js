@@ -34,3 +34,13 @@ function caffeineBuzz(n){
   if (n % 3 === 0)  return "Java";
   return "mocha_missing!";
 }
+
+
+// The following code could use a bit of object oriented artistry. While its a simple method and works just fine as it is, in a larger system its best to organize methods into classes/objects. Refactor the following code so that it belongs to a Person class/object. Each Person instance will have a greet method. The Person instance should be instantiated with a name so that it no longer has to be passed into each greet method call.
+
+var Person = function (name) {
+  this.name = name;
+  this.greet = function(whom) {
+    return 'Hello ' + whom + ', my name is ' + this.name;
+  }
+};
