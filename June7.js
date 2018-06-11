@@ -44,3 +44,21 @@ var Person = function (name) {
     return 'Hello ' + whom + ', my name is ' + this.name;
   }
 };
+
+
+// Write a function countAdjacentPairs that counts the number of adjacent pairs in a string. It should be case-insenstive. A word in this kata is a sequence of non-whitespace characters enclosed by whitespace, so the string "dog dog." contains the two words "dog" and "dog.", which differ. The occurence of two or more equal words next after each other count as one.
+
+function countAdjacentPairs(searchString) {
+  let adjacent = 0;
+  let remember = undefined;
+  searchString.split(" ").forEach(function(el) {
+    if((remember && remember.toLowerCase()) === el.toLowerCase()) {
+      adjacent++;
+      remember = undefined;
+    }
+    else {
+      remember = el;
+    }
+  });
+  return adjacent;
+}
