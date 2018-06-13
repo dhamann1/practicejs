@@ -18,7 +18,7 @@ function multiples3or5(number) {
 // Zero isn't an odd number and you don't need to move it. If you have an empty array, you need to return it.
 
 function sortArray(array) {
-  let odd = array.filter((x) => x % 2).sort((a,b) => a - b);
+  let odd = array.filter((x) => x % 2).sort((a, b) => a - b);
   return array.map((x) => x % 2 ? odd.shift() : x);
 }
 
@@ -28,17 +28,17 @@ function sortArray(array) {
 // If the integer is one of the above and is even, add "Script" to the end of the string.
 // Otherwise, return the string "mocha_missing!"
 
-function caffeineBuzz(n){
+function caffeineBuzz(n) {
   if (n % 12 === 0) return "CoffeeScript";
   if (n % 6 === 0) return "JavaScript";
-  if (n % 3 === 0)  return "Java";
+  if (n % 3 === 0) return "Java";
   return "mocha_missing!";
 }
 
 
 // The following code could use a bit of object oriented artistry. While its a simple method and works just fine as it is, in a larger system its best to organize methods into classes/objects. Refactor the following code so that it belongs to a Person class/object. Each Person instance will have a greet method. The Person instance should be instantiated with a name so that it no longer has to be passed into each greet method call.
 
-var Person = function (name) {
+var Person = function(name) {
   this.name = name;
   this.greet = function(whom) {
     return 'Hello ' + whom + ', my name is ' + this.name;
@@ -52,13 +52,26 @@ function countAdjacentPairs(searchString) {
   let adjacent = 0;
   let remember = undefined;
   searchString.split(" ").forEach(function(el) {
-    if((remember && remember.toLowerCase()) === el.toLowerCase()) {
+    if ((remember && remember.toLowerCase()) === el.toLowerCase()) {
       adjacent++;
       remember = undefined;
-    }
-    else {
+    } else {
       remember = el;
     }
   });
   return adjacent;
+}
+
+// Complete the keysAndValues function so that it takes in an object and returns the keys and values as separate arrays.
+
+function keysAndValues(data) {
+  let keys = [],
+    let vals = [];
+  for (key in data) {
+    if (data.hasOwnProperty(key)) {
+      keys.push(key);
+      vals.push(data[key]);
+    }
+  }
+  return [keys, vals];
 }
