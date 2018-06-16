@@ -89,3 +89,13 @@ function sumDigits(number) {
   Math.abs(number).toString().split('').map(num => sum += Math.abs(num))
   return sum;
 }
+
+Write a function that flattens an Array of Array objects into a flat Array. Your function must only do one level of flattening.
+
+function flatten (array){
+  let result = [];
+  for (let elem of array){
+    result = result.concat(elem);
+  }
+  return result;
+}
