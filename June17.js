@@ -9,3 +9,11 @@ function predictAge(age1,age2,age3,age4,age5,age6,age7,age8){
   let sq = Math.sqrt(sum);
   return Math.floor(sq/2);
 }
+
+// Create a function add(n)/Add(n) which returns a function that always adds n to any number
+
+function addAny(n) {
+  return function (m) {
+    return n+m;
+  }
+}
