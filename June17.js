@@ -45,3 +45,10 @@ function min(arr, toReturn) {
   let val = Math.min.apply(null, arr)
   return toReturn == 'value' ? val : arr.indexOf(val)
 }
+
+
+// Create a method that accepts an array of names, and returns an array of each name with its first letter capitalized.
+
+function capMe(names) {
+  return names.map(name => name[0].toUpperCase() + name.slice(1).toLowerCase());
+}
