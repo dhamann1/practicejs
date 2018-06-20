@@ -38,3 +38,10 @@ function getEvenNumbers(numbersArray){
 function cookingTime (eggs) {
   return 5 * Math.ceil(eggs / 8);
 }
+
+// Write a function that can return the smallest value of an array or the index of that value. The function's 2nd parameter will tell whether it should return the value or the index.
+
+function min(arr, toReturn) {
+  let val = Math.min.apply(null, arr)
+  return toReturn == 'value' ? val : arr.indexOf(val)
+}
