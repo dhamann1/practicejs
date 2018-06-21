@@ -52,3 +52,12 @@ function min(arr, toReturn) {
 function capMe(names) {
   return names.map(name => name[0].toUpperCase() + name.slice(1).toLowerCase());
 }
+
+
+// Write a method that takes one argument as name and then greets that name, capitalized and ends with an exclamation point.
+
+var greet = function(name) {
+  name = name[0].toUpperCase() + name.slice(1).toLowerCase();
+  return 'Hello ' + name +"!";
+
+};
