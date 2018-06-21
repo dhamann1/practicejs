@@ -61,3 +61,13 @@ var greet = function(name) {
   return 'Hello ' + name +"!";
 
 };
+
+// Create a JavaScript class like object called "Animal" that takes in "name" and "type" arguments. It should have a toString method that returns a human readable string indicating the argument information passed in. It should also allow the name property to be set.
+
+var Animal = function(name, type) {
+  this.name = name;
+  this.type = type;
+}
+Animal.prototype.toString = function() {
+  return this.name + ' is a ' + this.type;
+}
