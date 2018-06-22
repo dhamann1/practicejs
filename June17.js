@@ -77,3 +77,9 @@ Animal.prototype.toString = function() {
 function largest(n,xs){
   return xs.sort(function(a, b) {return a - b;}).slice(xs.length-n);
 }
+
+// Complete the solution so that it returns the number of times the search_text is found within the full_text.
+
+function substringSearch(fullText, searchText){
+  return fullText.split(searchText).length - 1;
+}
