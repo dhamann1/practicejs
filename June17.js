@@ -71,3 +71,9 @@ var Animal = function(name, type) {
 Animal.prototype.toString = function() {
   return this.name + ' is a ' + this.type;
 }
+
+// Write a program that outputs the top n elements from a list.
+
+function largest(n,xs){
+  return xs.sort(function(a, b) {return a - b;}).slice(xs.length-n);
+}
