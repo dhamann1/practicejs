@@ -83,3 +83,27 @@ function largest(n,xs){
 function substringSearch(fullText, searchText){
   return fullText.split(searchText).length - 1;
 }
+
+
+
+// Santa needs you to write two functions, getNiceNames and getNaughtyNames. Both of the functions accept an array of objects. getNiceNames returns an array containing only the names of the nice people, and getNaughtyNames returns an array containing only the names of the naughty people. Return an empty array [] if the result from either of the functions contains no names.
+
+function getName(person) {
+  return person.name;
+}
+
+function wasNice(person) {
+  return person.wasNice;
+}
+
+function wasNaughty(person) {
+  return !wasNice(person);
+}
+
+function getNiceNames(people){
+  return people.filter(wasNice).map(getName);
+}
+
+function getNaughtyNames(people){
+  return people.filter(wasNaughty).map(getName);
+}
