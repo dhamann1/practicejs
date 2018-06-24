@@ -107,3 +107,13 @@ function getNiceNames(people){
 function getNaughtyNames(people){
   return people.filter(wasNaughty).map(getName);
 }
+
+// You get a new job working for Eggman Movers. Your first task is to write a method that will allow the admin staff to enter a person’s name and return what that person's role is in the company.
+//
+// You will be given an array of object literals holding the current employees of the company. You code must find the employee with the matching firstName and lastName and then return the role for that employee or if no employee is not found it should return "Does not work here!"
+
+function findEmployeesRole(name) {
+  for(var i = 0; i < employees.length; i++)
+    if(name === employees[i].firstName + " " + employees[i].lastName) return employees[i].role;
+  return "Does not work here!";
+}
