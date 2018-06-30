@@ -41,3 +41,9 @@ function sumFromString(str) {
   }
   return res;
 }
+
+// In this exercise, a string is passed to a method and a new string has to be returned with the first character of each word in the string.
+
+function makeString(s) {
+  return s.split(' ').map(a => a[0]).join('');
+}
