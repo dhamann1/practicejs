@@ -47,3 +47,17 @@ function sumFromString(str) {
 function makeString(s) {
   return s.split(' ').map(a => a[0]).join('');
 }
+
+// Complete the function to find the count of the most frequent item of an array. You can assume that input is an array of integers. For an empty array return 0
+
+function mostFrequentItemCount(collection) {
+  if (collection.length === 0) return 0;
+
+  var count = {};
+
+  collection.forEach( item => {
+    count[item] = (count[item] || 0) + 1;
+  });
+
+  return Math.max(...Object.values(count));
+}
