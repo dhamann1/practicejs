@@ -61,3 +61,9 @@ function mostFrequentItemCount(collection) {
 
   return Math.max(...Object.values(count));
 }
+
+
+
+function multiplyChars(number){
+  return "hue".repeat(number);
+}
