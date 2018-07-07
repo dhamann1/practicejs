@@ -108,3 +108,15 @@ function isSquare(n) {
 function twoOldestAges(ages){
   return ages.sort(function(a,b){return a-b;}).slice(-2);
 }
+
+// When this method is called, it reverses the order of the items in the original array. Then then it returns that same, original array. No new arrays should need to be created to pass this kata.
+
+Array.prototype.reverse = function() {
+  var arr = this.splice(0);
+
+  while(arr.length) {
+    this.push(arr.pop());
+  }
+
+  return this;
+};
