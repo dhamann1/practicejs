@@ -126,3 +126,13 @@ Array.prototype.reverse = function() {
 Array.prototype.sum = function() {
   return this.reduce((a, b) => a + b, 0);
 };
+
+
+
+function makeParts(arr, chunk) {
+  let newArr = [];
+  while (arr.length > 0){
+    newArr.push(arr.splice(0, chunk));
+    }
+  return newArr;
+}
