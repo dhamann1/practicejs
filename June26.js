@@ -108,3 +108,31 @@ function isSquare(n) {
 function twoOldestAges(ages){
   return ages.sort(function(a,b){return a-b;}).slice(-2);
 }
+
+// When this method is called, it reverses the order of the items in the original array. Then then it returns that same, original array. No new arrays should need to be created to pass this kata.
+
+Array.prototype.reverse = function() {
+  var arr = this.splice(0);
+
+  while(arr.length) {
+    this.push(arr.pop());
+  }
+
+  return this;
+};
+
+// Your job is to add a method 'sum' to all array objects, which sums all the numbers in it. You should return 0 if the array is empty.
+
+Array.prototype.sum = function() {
+  return this.reduce((a, b) => a + b, 0);
+};
+
+
+
+function makeParts(arr, chunk) {
+  let newArr = [];
+  while (arr.length > 0){
+    newArr.push(arr.splice(0, chunk));
+    }
+  return newArr;
+}
