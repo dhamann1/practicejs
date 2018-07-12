@@ -17,3 +17,7 @@ function roundToNext5(n) {
   }
   return n;
 }
+
+// The aim is to compare each pair of integers from 2 arrays, and return a new array of large numbers.
+
+function getLargerNumbers = (a, b) => a.map((x, i) => Math.max(x, b[i]));
