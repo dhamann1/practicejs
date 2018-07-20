@@ -35,8 +35,16 @@ function covfefe(str) {
   return str.replace(/coverage/g, "covfefe");
 }
 
-
-
-
+// Given a string, swap the case for each of the letters.
 
 let caseSwap = (str) => str.split('').map(x => x == x.toUpperCase() ? x.toLowerCase() : x.toUpperCase()).join('');
+
+
+
+// OK, let's help Santa and his elves with a simple function handOutGift() (hand_out_gift in Ruby, HandOutGift in C# ) which takes the name of the next child. If this child already got a gift, it must throw an error in order to remind Santa.
+
+var names = [];
+function handOutGift(name) {
+  if (names.indexOf(name) !== -1) throw "Error";
+  names.push(name)
+}
