@@ -48,3 +48,8 @@ function handOutGift(name) {
   if (names.indexOf(name) !== -1) throw "Error";
   names.push(name)
 }
+
+
+Your task is to remove all consecutive duplicate words from string, leaving only first words entries.
+
+let removeConsecutiveDuplicates = s => s.split(' ').filter((elem,i,arr) => arr[++i] !== elem).join(' ')
