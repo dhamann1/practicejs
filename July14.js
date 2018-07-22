@@ -44,6 +44,7 @@ let caseSwap = (str) => str.split('').map(x => x == x.toUpperCase() ? x.toLowerC
 // OK, let's help Santa and his elves with a simple function handOutGift() (hand_out_gift in Ruby, HandOutGift in C# ) which takes the name of the next child. If this child already got a gift, it must throw an error in order to remind Santa.
 
 var names = [];
+
 function handOutGift(name) {
   if (names.indexOf(name) !== -1) throw "Error";
   names.push(name)
@@ -52,4 +53,23 @@ function handOutGift(name) {
 
 Your task is to remove all consecutive duplicate words from string, leaving only first words entries.
 
-let removeConsecutiveDuplicates = s => s.split(' ').filter((elem,i,arr) => arr[++i] !== elem).join(' ')
+let removeConsecutiveDuplicates = s => s.split(' ').filter((elem, i, arr) => arr[++i] !== elem).join(' ')
+
+
+
+
+// The main idea is to count all the occuring characters(UTF-8) in string. If you have string like this aba then the result should be { 'a': 2, 'b': 1 }
+// What if the string is empty ? Then the result should be empty object literal { }
+
+function count(string) {
+  let countObj = {};
+  let splitString = string.split('');
+  splitString.map((char) => {
+    if (countObj[char] != undefined) {
+      countObj[char]++;
+    } else {
+      countObj[char] = 1;
+    }
+  })
+  return countObj;
+}
