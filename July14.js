@@ -114,3 +114,12 @@ function sumArray(array) {
    }
   return sum - max - min
 }
+
+
+
+// Your task is to count all the combinations of numbers in an array whose sum equals the number passed into the second parameter in the arguments of the function. The combination length will be limited to all combinations which are exactly one less than the length of the array. If the array is [2, 0, 0, 0, 1] only count the combinations of four numbers.
+
+function numCombo(arr, num){
+  let sum = arr.reduce((a, b) => a + b)
+  return arr.filter(x => sum - x == num).length;
+}
