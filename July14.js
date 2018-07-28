@@ -83,12 +83,12 @@ function count(string) {
 
 
 function pizzaPayments(costs) {
-  if(costs < 5){
-   return Number(costs.toFixed(2));
-  }else if(costs <= 30){
-   return Number((costs * 2/3).toFixed(2));
-  }else{
-   return Number((costs - 10).toFixed(2));
+  if (costs < 5) {
+    return Number(costs.toFixed(2));
+  } else if (costs <= 30) {
+    return Number((costs * 2 / 3).toFixed(2));
+  } else {
+    return Number((costs - 10).toFixed(2));
   }
 }
 
@@ -96,7 +96,7 @@ function pizzaPayments(costs) {
 // You get an array of numbers, return the sum of all of the positives ones.
 
 function positiveSum(arr) {
-  return arr.filter(x => x > 0).reduce((a, b) => a+b, 0);
+  return arr.filter(x => x > 0).reduce((a, b) => a + b, 0);
 }
 
 
@@ -111,7 +111,7 @@ function sumArray(array) {
   let sum = 0
   for (i = 0; i < array.length; i++) {
     sum += array[i];
-   }
+  }
   return sum - max - min
 }
 
@@ -119,7 +119,23 @@ function sumArray(array) {
 
 // Your task is to count all the combinations of numbers in an array whose sum equals the number passed into the second parameter in the arguments of the function. The combination length will be limited to all combinations which are exactly one less than the length of the array. If the array is [2, 0, 0, 0, 1] only count the combinations of four numbers.
 
-function numCombo(arr, num){
+function numCombo(arr, num) {
   let sum = arr.reduce((a, b) => a + b)
   return arr.filter(x => sum - x == num).length;
+}
+// Given a string that may have mixed uppercase and lowercase letters and your task is to convert that string to either lowercase only or uppercase only based on:
+// make as few changes as possible.
+// if the string contains equal number of uppercase and lowercase letters, convert the string to lowercase.
+
+function fixStringCase(s) {
+  let lowerCase = 0;
+  let upperCase = 0;
+  for (let i = 0; i < s.length; i++) {
+    if (s[i] == s[i].toUpperCase()) {
+      upperC++;
+    } else {
+      lowerC++;
+    }
+  }
+  return lowerCase >= upperCase ? s.toLowerCase() : s.toUpperCase()
 }
