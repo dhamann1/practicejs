@@ -139,3 +139,27 @@ function fixStringCase(s) {
   }
   return lowerCase >= upperCase ? s.toLowerCase() : s.toUpperCase()
 }
+
+// Write a method called workNeeded to figure out how much time you need to contribute to a project.
+
+// Giving the amount of time in minutes needed to complete the project and an array of pair values representing other freelancers' time in [Hours, Minutes] format ie. [[2, 33], [3, 44]] calculate how much time you will need to contribute to the project (if at all) and return a string depending on the case.
+
+// If we need to contribute time to the project then return "I need to work x hour(s) and y minute(s)"
+// If we don't have to contribute any time to the project then return "Easy Money!"
+
+
+
+function workNeeded(projectMinutes, freelancers) {
+  let freelancerMinutes = freelancers.map(([hours, minutes]) => hours * 60 + minutes)
+    .reduce((a, b) => a + b);
+
+  let minutesToSpare = projectMinutes - freelancerMinutes;
+  if (minutesToSpare <= 0) {
+    return 'Easy Money!';
+  }
+
+  let hours = Math.floor(minutesToSpare / 60);
+  let minutes = minutesToSpare % 60;
+
+  return `I need to work ${hours} hour(s) and ${minutes} minute(s)`
+}

@@ -31,3 +31,5 @@ function reverser(sentence){
 // Given a string showing either flat road ("_") or bumps ("n"), work out if you make it home safely. 15 bumps or under, return "Woohoo!", over 15 bumps return "Car Dead".
 
 let bump = string => string.split('n').length >16 ? "Car Dead":"Woohoo!";
+
+
