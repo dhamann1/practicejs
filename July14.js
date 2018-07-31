@@ -163,3 +163,7 @@ function workNeeded(projectMinutes, freelancers) {
 
   return `I need to work ${hours} hour(s) and ${minutes} minute(s)`
 }
+
+// Given a string, you have to return a string in which each character (case-sensitive) is repeated once.
+
+let doubleChar = (str) => str.split("").map(letter => letter + letter).join("");
