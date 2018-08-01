@@ -167,3 +167,12 @@ function workNeeded(projectMinutes, freelancers) {
 // Given a string, you have to return a string in which each character (case-sensitive) is repeated once.
 
 let doubleChar = (str) => str.split("").map(letter => letter + letter).join("");
+
+// Given the number (n), populate an array with all numbers up to and including that number, but excluding zero.
+function monkeyCount(n) {
+  let num = [];
+  for (let i = 1; i <= n; i++) {
+    num.push(i);
+  }
+  return num;
+}
