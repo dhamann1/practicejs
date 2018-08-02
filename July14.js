@@ -176,3 +176,13 @@ function monkeyCount(n) {
   }
   return num;
 }
+
+// Complete the function that takes two numbers as input, num and nth and return the nth digit of num (counting from right to left).
+
+function findDigit(num, nth) {
+  if (nth < 1) return -1;
+  if (num < 0) return findDigit(-num, nth);
+  if (num == 0) return 0;
+  if (nth > 1) return findDigit(Math.floor(num / 10), nth - 1);
+  return num % 10;
+}
