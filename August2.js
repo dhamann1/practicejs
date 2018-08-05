@@ -29,3 +29,10 @@ let AmIAfraid = (day, num) => {
     Sunday: d => Math.abs(d) == 666
   }[day](num);
 }
+
+
+// Output will be a valid sorted array with People objects sorted by Age in ascending order
+
+function OrderPeople(people) {
+  return people.sort((a, b) => a.age - b.age)
+}
