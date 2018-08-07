@@ -36,3 +36,12 @@ let AmIAfraid = (day, num) => {
 function OrderPeople(people) {
   return people.sort((a, b) => a.age - b.age)
 }
+
+
+// Return another string such that even-indexed and odd-indexed characters of String are grouped and groups are space-separated
+
+const sortMyString = string => {
+    let even = string.split('').filter((v, i) => i % 2 === 0).join('');
+    let odd = string.split('').filter((v, i) => i % 2 !== 0).join('');
+    return even + ' ' + odd;
+}
