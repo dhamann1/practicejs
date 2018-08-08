@@ -45,3 +45,15 @@ const sortMyString = string => {
     let odd = string.split('').filter((v, i) => i % 2 !== 0).join('');
     return even + ' ' + odd;
 }
+
+// Build a function that takes in two arguments (salary, bonus). Salary will be an integer, and bonus a boolean.
+// If bonus is true, the salary should be multiplied by 10. If bonus is false, the fatcat did not make enough money and must receive only his stated salary.
+
+function bonusTime(salary, bonus) {
+  if (bonus === true) {
+    let newSal = salary * 10;
+    return "$" + newSal;
+  } else {
+  return "$" + salary;
+  }
+}
