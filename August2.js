@@ -56,4 +56,10 @@ function bonusTime(salary, bonus) {
   } else {
   return "$" + salary;
   }
+
+
+Define String.prototype.toAlternatingCase such that each lowercase letter becomes uppercase and each uppercase letter becomes lowercase.
+
+String.prototype.toAlternatingCase = function () {
+  return this.split('').map(char => char === char.toUpperCase() ? char.toLowerCase() : char.toUpperCase()).join('');
 }
