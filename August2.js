@@ -63,3 +63,10 @@ Define String.prototype.toAlternatingCase such that each lowercase letter become
 String.prototype.toAlternatingCase = function () {
   return this.split('').map(char => char === char.toUpperCase() ? char.toLowerCase() : char.toUpperCase()).join('');
 }
+
+
+//Sum an array
+
+function sum(numbers) {
+  return numbers.reduce((a, b) => a + b, 0);
+}
