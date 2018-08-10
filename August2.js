@@ -70,3 +70,14 @@ String.prototype.toAlternatingCase = function () {
 function sum(numbers) {
   return numbers.reduce((a, b) => a + b, 0);
 }
+
+
+// Create a function with two arguments that will return a list of length (n) with multiples of (x).
+
+function countBy(x, n) {
+  var numList = []
+  for (let i = 1; i <= n; i++) {
+    numList.push(x * i);
+  }
+  return numList;
+}
