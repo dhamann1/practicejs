@@ -41,9 +41,9 @@ function OrderPeople(people) {
 // Return another string such that even-indexed and odd-indexed characters of String are grouped and groups are space-separated
 
 const sortMyString = string => {
-    let even = string.split('').filter((v, i) => i % 2 === 0).join('');
-    let odd = string.split('').filter((v, i) => i % 2 !== 0).join('');
-    return even + ' ' + odd;
+  let even = string.split('').filter((v, i) => i % 2 === 0).join('');
+  let odd = string.split('').filter((v, i) => i % 2 !== 0).join('');
+  return even + ' ' + odd;
 }
 
 // Build a function that takes in two arguments (salary, bonus). Salary will be an integer, and bonus a boolean.
@@ -54,30 +54,36 @@ function bonusTime(salary, bonus) {
     let newSal = salary * 10;
     return "$" + newSal;
   } else {
-  return "$" + salary;
+    return "$" + salary;
   }
 
 
-Define String.prototype.toAlternatingCase such that each lowercase letter becomes uppercase and each uppercase letter becomes lowercase.
+  Define String.prototype.toAlternatingCase such that each lowercase letter becomes uppercase and each uppercase letter becomes lowercase.
 
-String.prototype.toAlternatingCase = function () {
-  return this.split('').map(char => char === char.toUpperCase() ? char.toLowerCase() : char.toUpperCase()).join('');
-}
-
-
-//Sum an array
-
-function sum(numbers) {
-  return numbers.reduce((a, b) => a + b, 0);
-}
-
-
-// Create a function with two arguments that will return a list of length (n) with multiples of (x).
-
-function countBy(x, n) {
-  var numList = []
-  for (let i = 1; i <= n; i++) {
-    numList.push(x * i);
+  String.prototype.toAlternatingCase = function () {
+    return this.split('').map(char => char === char.toUpperCase() ? char.toLowerCase() : char.toUpperCase()).join('');
   }
-  return numList;
-}
+
+
+  //Sum an array
+
+  function sum(numbers) {
+    return numbers.reduce((a, b) => a + b, 0);
+  }
+
+
+  // Create a function with two arguments that will return a list of length (n) with multiples of (x).
+
+  function countBy(x, n) {
+    var numList = []
+    for (let i = 1; i <= n; i++) {
+      numList.push(x * i);
+    }
+    return numList;
+  }
+
+  // Given a set of numbers, return the additive inverse of each. Each positive becomes negatives, and the negatives become positives.
+
+  function invert(array) {
+    return array.map(num => num === 0 ? num : -num);
+  }
