@@ -95,3 +95,10 @@ function invert(array) {
 function removeExclamationMarks(s) {
   return s.replace(/!/gi, '');
 }
+
+// Your task is to implement the authenticate() method of the sleigh, which takes the name of the person, who wants to board the sleigh and a secret password. If, and only if, the name equals "Santa Claus" and the password is "Ho Ho Ho!" the return value must be true. Otherwise it should return false.
+
+function Sleigh() {}
+Sleigh.prototype.authenticate = function(name, password) {
+  return name === "Santa Claus" && password === "Ho Ho Ho!";
+};
