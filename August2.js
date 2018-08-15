@@ -61,7 +61,7 @@ function bonusTime(salary, bonus) {
 
 // Define String.prototype.toAlternatingCase such that each lowercase letter becomes uppercase and each uppercase letter becomes lowercase.
 
-String.prototype.toAlternatingCase = function () {
+String.prototype.toAlternatingCase = function() {
   return this.split('').map(char => char === char.toUpperCase() ? char.toLowerCase() : char.toUpperCase()).join('');
 }
 
@@ -123,4 +123,19 @@ function calculateAge(a, b) {
   } else {
     return `You will be born in ${a-b} years.`;
   }
+}
+
+// Write a function called whatday() which returns the day according to the number
+
+function whatday(num) {
+  let days = {
+    1: 'Sunday',
+    2: 'Monday',
+    3: 'Tuesday',
+    4: 'Wednesday',
+    5: 'Thursday',
+    6: 'Friday',
+    7: 'Saturday'
+  }
+  return days[num] || 'Wrong, please enter a number between 1 and 7';
 }
