@@ -139,3 +139,7 @@ function whatday(num) {
   }
   return days[num] || 'Wrong, please enter a number between 1 and 7';
 }
+
+// Return a new array consisting of elements which are multiple of their own index in input array (length > 1).
+
+const multipleOfIndex = a => a.filter((n, i) => n % i == 0);
