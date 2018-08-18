@@ -61,7 +61,7 @@ function bonusTime(salary, bonus) {
 
 // Define String.prototype.toAlternatingCase such that each lowercase letter becomes uppercase and each uppercase letter becomes lowercase.
 
-String.prototype.toAlternatingCase = function() {
+String.prototype.toAlternatingCase = function () {
   return this.split('').map(char => char === char.toUpperCase() ? char.toLowerCase() : char.toUpperCase()).join('');
 }
 
@@ -99,7 +99,7 @@ function removeExclamationMarks(s) {
 // Your task is to implement the authenticate() method of the sleigh, which takes the name of the person, who wants to board the sleigh and a secret password. If, and only if, the name equals "Santa Claus" and the password is "Ho Ho Ho!" the return value must be true. Otherwise it should return false.
 
 function Sleigh() {}
-Sleigh.prototype.authenticate = function(name, password) {
+Sleigh.prototype.authenticate = function (name, password) {
   return name === "Santa Claus" && password === "Ho Ho Ho!";
 };
 
@@ -125,21 +125,24 @@ function calculateAge(a, b) {
   }
 }
 
-// Write a function called whatday() which returns the day according to the number
+// Who remembers back to their time in the schoolyard, when girls would take a flower and tear its petals, saying each of the following phrases each time a petal was torn:
+// I love you
+// a little
+// a lot
+// passionately
+// madly
+// not at all
+// When the last petal was torn there were cries of excitement, dreams, surging thoughts and emotions.
+// Your goal in this kata is to determine which phrase the girls would say for a flower of a given number of petals, where nb_petals > 0.
 
-function whatday(num) {
-  let days = {
-    1: 'Sunday',
-    2: 'Monday',
-    3: 'Tuesday',
-    4: 'Wednesday',
-    5: 'Thursday',
-    6: 'Friday',
-    7: 'Saturday'
+function howMuchILoveYou(nbPetals) {
+  let phrase = {    
+    0: "not at all",
+    1: "I love you",
+    2: "a little",
+    3: "a lot",
+    4: "passionately",
+    5: "madly"
   }
-  return days[num] || 'Wrong, please enter a number between 1 and 7';
+  return phrase[nbPetals%6]
 }
-
-// Return a new array consisting of elements which are multiple of their own index in input array (length > 1).
-
-const multipleOfIndex = a => a.filter((n, i) => n % i == 0);
