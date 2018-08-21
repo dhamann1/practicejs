@@ -136,7 +136,7 @@ function calculateAge(a, b) {
 // Your goal in this kata is to determine which phrase the girls would say for a flower of a given number of petals, where nb_petals > 0.
 
 function howMuchILoveYou(nbPetals) {
-  let phrase = {    
+  let phrase = {
     0: "not at all",
     1: "I love you",
     2: "a little",
@@ -145,4 +145,11 @@ function howMuchILoveYou(nbPetals) {
     5: "madly"
   }
   return phrase[nbPetals%6]
+}
+
+
+// Your code will show Full name of the neighbor and the truncated version of the name as an array. If the number of the characters in name is equal or less than two, it will return an array containing only the name as is"
+
+function whoIsPaying(name){
+  return name.length > 2 ? [name, name.slice(0,2)] : [name]
 }
