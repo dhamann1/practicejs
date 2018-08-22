@@ -61,7 +61,7 @@ function bonusTime(salary, bonus) {
 
 // Define String.prototype.toAlternatingCase such that each lowercase letter becomes uppercase and each uppercase letter becomes lowercase.
 
-String.prototype.toAlternatingCase = function () {
+String.prototype.toAlternatingCase = function() {
   return this.split('').map(char => char === char.toUpperCase() ? char.toLowerCase() : char.toUpperCase()).join('');
 }
 
@@ -99,7 +99,7 @@ function removeExclamationMarks(s) {
 // Your task is to implement the authenticate() method of the sleigh, which takes the name of the person, who wants to board the sleigh and a secret password. If, and only if, the name equals "Santa Claus" and the password is "Ho Ho Ho!" the return value must be true. Otherwise it should return false.
 
 function Sleigh() {}
-Sleigh.prototype.authenticate = function (name, password) {
+Sleigh.prototype.authenticate = function(name, password) {
   return name === "Santa Claus" && password === "Ho Ho Ho!";
 };
 
@@ -144,12 +144,26 @@ function howMuchILoveYou(nbPetals) {
     4: "passionately",
     5: "madly"
   }
-  return phrase[nbPetals%6]
+  return phrase[nbPetals % 6]
 }
 
 
 // Your code will show Full name of the neighbor and the truncated version of the name as an array. If the number of the characters in name is equal or less than two, it will return an array containing only the name as is"
 
-function whoIsPaying(name){
-  return name.length > 2 ? [name, name.slice(0,2)] : [name]
+function whoIsPaying(name) {
+  return name.length > 2 ? [name, name.slice(0, 2)] : [name]
+}
+
+Write a function called that takes a string of parentheses, and determines if the order of the parentheses is valid. The function should return true if the string is valid, and false if it's invalid.
+
+
+
+function validParentheses(parens) {
+  let n = 0;
+  for (let i = 0; i < parens.length; i++) {
+    if (parens[i] == '(') n++;
+    if (parens[i] == ')') n--;
+    if (n < 0) return false;
+  }
+  return n == 0;
 }
