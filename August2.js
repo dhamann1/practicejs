@@ -156,8 +156,6 @@ function whoIsPaying(name) {
 
 Write a function called that takes a string of parentheses, and determines if the order of the parentheses is valid. The function should return true if the string is valid, and false if it's invalid.
 
-
-
 function validParentheses(parens) {
   let n = 0;
   for (let i = 0; i < parens.length; i++) {
@@ -166,4 +164,10 @@ function validParentheses(parens) {
     if (n < 0) return false;
   }
   return n == 0;
+}
+
+// Create a function isDivisible(n, x, y) that checks if a number n is divisible by two numbers x and y
+
+function isDivisible(n, x, y) {
+  return n % x === 0 && n % y === 0
 }
