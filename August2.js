@@ -171,3 +171,8 @@ function validParentheses(parens) {
 function isDivisible(n, x, y) {
   return n % x === 0 && n % y === 0
 }
+
+
+// Check if there is gold in the bucket, and if so, return True/true. If not, return False/false.
+
+let checkTheBucket = arr => arr.includes('gold')
