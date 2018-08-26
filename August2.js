@@ -176,3 +176,13 @@ function isDivisible(n, x, y) {
 // Check if there is gold in the bucket, and if so, return True/true. If not, return False/false.
 
 let checkTheBucket = arr => arr.includes('gold')
+
+// Given a number, 3 for example, return a string with a murmur: "1 sheep...2 sheep...3 sheep..."
+
+const countSheep = num => {
+  let val = '';
+  for (let i = 1; i <= num; i++) {
+    val += `${i} sheep...`;
+  }
+  return val;
+}
