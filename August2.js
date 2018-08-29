@@ -204,3 +204,32 @@ const finalGrade = (exam, projects) => {
 // Given a number, write a function to output its reverse digits. (e.g. given 123 the answer is 321)
 
 const reverseNumber = n => (n > 0 ? 1 : -1) * Math.abs(n).toString().split('').reverse().join('')
+
+// When provided with a number between 0-9, return it in words.
+
+function switchItUp(number) {
+  switch (number) {
+    case 0:
+      return 'Zero';
+    case 1:
+      return 'One';
+    case 2:
+      return 'Two';
+    case 3:
+      return 'Three';
+    case 4:
+      return 'Four';
+    case 5:
+      return 'Five';
+    case 6:
+      return 'Six';
+    case 7:
+      return 'Seven';
+    case 8:
+      return 'Eight';
+    case 9:
+      return 'Nine';
+    default:
+      return 'Unknown number';
+  }
+}
