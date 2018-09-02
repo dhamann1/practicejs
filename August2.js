@@ -61,7 +61,7 @@ function bonusTime(salary, bonus) {
 
 // Define String.prototype.toAlternatingCase such that each lowercase letter becomes uppercase and each uppercase letter becomes lowercase.
 
-String.prototype.toAlternatingCase = function() {
+String.prototype.toAlternatingCase = function () {
   return this.split('').map(char => char === char.toUpperCase() ? char.toLowerCase() : char.toUpperCase()).join('');
 }
 
@@ -99,7 +99,7 @@ function removeExclamationMarks(s) {
 // Your task is to implement the authenticate() method of the sleigh, which takes the name of the person, who wants to board the sleigh and a secret password. If, and only if, the name equals "Santa Claus" and the password is "Ho Ho Ho!" the return value must be true. Otherwise it should return false.
 
 function Sleigh() {}
-Sleigh.prototype.authenticate = function(name, password) {
+Sleigh.prototype.authenticate = function (name, password) {
   return name === "Santa Claus" && password === "Ho Ho Ho!";
 };
 
@@ -154,7 +154,13 @@ function whoIsPaying(name) {
   return name.length > 2 ? [name, name.slice(0, 2)] : [name]
 }
 
-Write a function called that takes a string of parentheses, and determines if the order of the parentheses is valid. The function should return true if the string is valid, and false if it's invalid.
+Write a
+function called that takes a string of parentheses, and determines
+if the order of the parentheses is valid.The
+function should
+return true
+if the string is valid, and false
+if it 's invalid.
 
 function validParentheses(parens) {
   let n = 0;
@@ -195,9 +201,9 @@ const countSheep = num => {
 // 0, in other cases
 
 const finalGrade = (exam, projects) => {
-  if(exam > 90 || projects > 10) return 100
-  if(exam > 75 && projects > 4) return 90
-  if(exam > 50 && projects > 1) return 75
+  if (exam > 90 || projects > 10) return 100
+  if (exam > 75 && projects > 4) return 90
+  if (exam > 50 && projects > 1) return 75
   return 0;
 }
 
@@ -239,11 +245,12 @@ function switchItUp(number) {
 // Write a code that gives out the total amount for different days(d).
 
 function rentalCarCost(d) {
-  var total=40*d,discount=0;
-  if(d>=7){
-    total-=50;
-  }else if(d>=3){
-    total-=20;
+  var total = 40 * d,
+    discount = 0;
+  if (d >= 7) {
+    total -= 50;
+  } else if (d >= 3) {
+    total -= 20;
   }
   return total;
 }
@@ -252,3 +259,30 @@ function rentalCarCost(d) {
 // You were camping with your friends far away from home, but when it's time to go back, you realize that you fuel is running out and the nearest pump is 50 miles away! You know that on average, your car runs on about 25 miles per gallon. There are 2 gallons left. Considering these factors, write a function that tells you if it is possible to get to the pump or not. Function should return true if it is possible and false if not.
 
 const zeroFuel = (distanceToPump, mpg, fuelLeft) => mpg * fuelLeft >= distanceToPump;
+
+// Complete the function, which calculates how much you need to tip based on the total amount of the bill and the service.
+
+// You need to consider the following ratings:
+
+// Terrible: tip 0%
+// Poor: tip 5%
+// Good: tip 10%
+// Great: tip 15%
+// Excellent: tip 20%
+
+
+function calculateTip(amount, rating) {
+
+  let tips = {
+    'terrible': 0,
+    'poor': .05,
+    'good': .1,
+    'great': .15,
+    'excellent': .2
+  }
+
+  rating = rating.toLowerCase();
+
+  return rating in tips ? Math.ceil(amount * tips[rating]) : "Rating not recognised";
+
+}
