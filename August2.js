@@ -298,3 +298,20 @@ function removeChar(str) {
 function boolToWord( bool ){
   return bool ? 'Yes':'No';
 }
+
+// create three functions that one needs to be able to call upon an array
+// This function returns true only if the predicate supplied returns true for all the items in the array
+// This function returns true only if the predicate supplied returns false for all the items in the array
+// This function returns true if at least one of the items in the array returns true for the predicate supplied
+
+Array.prototype.all = function (p) {
+  return this.filter(p).length === this.length;
+};
+
+Array.prototype.none = function (p) {
+  return this.filter(p).length === 0;
+};
+
+Array.prototype.any = function (p) {
+  return this.filter(p).length > 0;
+};
