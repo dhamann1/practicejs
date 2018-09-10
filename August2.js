@@ -315,3 +315,7 @@ Array.prototype.none = function (p) {
 Array.prototype.any = function (p) {
   return this.filter(p).length > 0;
 };
+
+// returns true if all the parameters it is passed are of the Number type. Otherwise, the function should return false. The function should accept any number of parameters.
+
+const numbers = (...arr) => arr.every(x => typeof x === 'number')
