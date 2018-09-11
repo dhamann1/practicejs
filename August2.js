@@ -319,3 +319,26 @@ Array.prototype.any = function (p) {
 // returns true if all the parameters it is passed are of the Number type. Otherwise, the function should return false. The function should accept any number of parameters.
 
 const numbers = (...arr) => arr.every(x => typeof x === 'number')
+
+// The Arara are an isolated tribe found in the Amazon who count in pairs. For example one to eight is as follows:
+//
+// 1 = anane
+// 2 = adak
+// 3 = adak anane
+// 4 = adak adak
+// 5 = adak adak anane
+// 6 = adak adak adak
+// 7 = adak adak adak anane
+// 8 = adak adak adak adak
+//
+// Take a given number and return the Arara's equivalent.
+
+
+function countArara(n) {
+  switch (n) {
+    case 0:  return '';
+    case 1:  return 'anane';
+    case 2:  return 'adak';
+    default: return 'adak ' + countArara(n-2);
+  }
+}
