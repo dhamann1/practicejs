@@ -53,6 +53,14 @@ function capMe(names) {
   return names.map(name => name[0].toUpperCase() + name.slice(1).toLowerCase());
 }
 
+function capMe(names) {
+  return names.map(capitalize)
+}
+
+function capitalize(str) {
+  return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase()
+}
+
 
 // Write a method that takes one argument as name and then greets that name, capitalized and ends with an exclamation point.
 
