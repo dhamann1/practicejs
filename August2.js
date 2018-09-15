@@ -378,3 +378,18 @@ function powerOf4(n) {
   }
   return true;
 }
+
+// write something more like:
+//
+// console.log('Root->');
+// console.log(' '.repeat(4) + 'Sub-node');
+// console.log(' '.repeat(4) + 'Sub-node->');
+// console.log(' '.repeat(8) + 'Sub-sub-node');
+
+String.prototype.repeat = function(count) {
+   let str="";
+   for(var i = 0; i < count; ++i){
+   str += this;
+   }
+   return str;
+};
