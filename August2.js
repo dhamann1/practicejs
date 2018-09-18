@@ -61,7 +61,7 @@ function bonusTime(salary, bonus) {
 
 // Define String.prototype.toAlternatingCase such that each lowercase letter becomes uppercase and each uppercase letter becomes lowercase.
 
-String.prototype.toAlternatingCase = function () {
+String.prototype.toAlternatingCase = function() {
   return this.split('').map(char => char === char.toUpperCase() ? char.toLowerCase() : char.toUpperCase()).join('');
 }
 
@@ -99,7 +99,7 @@ function removeExclamationMarks(s) {
 // Your task is to implement the authenticate() method of the sleigh, which takes the name of the person, who wants to board the sleigh and a secret password. If, and only if, the name equals "Santa Claus" and the password is "Ho Ho Ho!" the return value must be true. Otherwise it should return false.
 
 function Sleigh() {}
-Sleigh.prototype.authenticate = function (name, password) {
+Sleigh.prototype.authenticate = function(name, password) {
   return name === "Santa Claus" && password === "Ho Ho Ho!";
 };
 
@@ -155,8 +155,10 @@ function whoIsPaying(name) {
 }
 
 Write a
+
 function called that takes a string of parentheses, and determines
 if the order of the parentheses is valid.The
+
 function should
 return true
 if the string is valid, and false
@@ -295,8 +297,8 @@ function removeChar(str) {
 
 // Complete the method that takes a boolean value and return a "Yes" string for true, or a "No" string for false.
 
-function boolToWord( bool ){
-  return bool ? 'Yes':'No';
+function boolToWord(bool) {
+  return bool ? 'Yes' : 'No';
 }
 
 // create three functions that one needs to be able to call upon an array
@@ -304,15 +306,15 @@ function boolToWord( bool ){
 // This function returns true only if the predicate supplied returns false for all the items in the array
 // This function returns true if at least one of the items in the array returns true for the predicate supplied
 
-Array.prototype.all = function (p) {
+Array.prototype.all = function(p) {
   return this.filter(p).length === this.length;
 };
 
-Array.prototype.none = function (p) {
+Array.prototype.none = function(p) {
   return this.filter(p).length === 0;
 };
 
-Array.prototype.any = function (p) {
+Array.prototype.any = function(p) {
   return this.filter(p).length > 0;
 };
 
@@ -336,20 +338,24 @@ const numbers = (...arr) => arr.every(x => typeof x === 'number')
 
 function countArara(n) {
   switch (n) {
-    case 0:  return '';
-    case 1:  return 'anane';
-    case 2:  return 'adak';
-    default: return 'adak ' + countArara(n-2);
+    case 0:
+      return '';
+    case 1:
+      return 'anane';
+    case 2:
+      return 'adak';
+    default:
+      return 'adak ' + countArara(n - 2);
   }
 }
 
 // Find the number with the most digits. If two numbers in the argument array have the same number of digits, return the first one in the array.
 
-function findLongest(array){
+function findLongest(array) {
   let num = '0';
-  for(let i=0; i<array.length; i++) {
+  for (let i = 0; i < array.length; i++) {
     let string = array[i].toString();
-    if(string.length > num.length) {
+    if (string.length > num.length) {
       num = string;
     }
   }
@@ -362,8 +368,8 @@ function findLongest(array){
 const minValue = (values) => {
   let sorted = values.sort();
   let lowestNums = [];
-  for(let i=0; i<sorted.length; i++) {
-    if(lowestNums.indexOf(sorted[i]) === -1) {
+  for (let i = 0; i < sorted.length; i++) {
+    if (lowestNums.indexOf(sorted[i]) === -1) {
       lowestNums.push(sorted[i]);
     }
   }
@@ -387,11 +393,11 @@ function powerOf4(n) {
 // console.log(' '.repeat(8) + 'Sub-sub-node');
 
 String.prototype.repeat = function(count) {
-   let str="";
-   for(var i = 0; i < count; ++i){
-   str += this;
-   }
-   return str;
+  let str = "";
+  for (var i = 0; i < count; ++i) {
+    str += this;
+  }
+  return str;
 };
 
 // Anyway your task is to calculate how many successful shots you will be able to make given the available ammo and your aim score, then return a string representing the pool of ducks, with those ducks shot marked with 'X' and those that survived left unchanged. You will always shoot left to right.
@@ -407,10 +413,17 @@ String.prototype.repeat = function(count) {
 // All inputs will be correct type and never empty.
 
 
-function duckShoot(ammo, aim, ducks){
+function duckShoot(ammo, aim, ducks) {
   let shots = Math.floor(ammo * aim)
-  for(let i=0; i < shots; i++){
+  for (let i = 0; i < shots; i++) {
     ducks = ducks.replace("2", "X");
   }
   return ducks;
+}
+
+// Given a string of words (x), you need to return an array of the words, sorted alphabetically by the final character in each.
+// If two words have the same last letter, they returned array should show them in the order they appeared in the given string.
+
+function last(x) {
+  return x.split(' ').sort((a, b) => a.charCodeAt(a.length - 1) - b.charCodeAt(b.length - 1));
 }
