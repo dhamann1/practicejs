@@ -427,3 +427,12 @@ function duckShoot(ammo, aim, ducks) {
 function last(x) {
   return x.split(' ').sort((a, b) => a.charCodeAt(a.length - 1) - b.charCodeAt(b.length - 1));
 }
+
+ // write a function which takes a sorted array ary and a value val, and returns the lowest index where you could insert val to maintain the sorted-ness of the array. The input array will always be sorted in ascending order. It may contain duplicates.
+
+ function keepOrder(ary, val) {
+   for(let i=0; i<ary.length; i++){
+     if(ary[i]>=val) {return i;}
+   }
+   return i;
+ }
