@@ -444,3 +444,20 @@ function getDivisorsCnt(n) {
   for(var i = 1; i <= n; i++) if(n % i == 0) div++;
   return div;
 }
+
+// Given a lower case string and your task will be to remove k characters from that string using the following rule:
+// - first remove all letter 'a', followed by letter 'b', then 'c', etc...
+// - remove the leftmost character first.
+
+
+
+function letterRemoval(s, k){
+  let abc = "abcdefghijklmnopqrstuvwxyz"
+  for (let i=0; i<abc.length; i+=1) {
+    while(s.includes(abc[i]) && k > 0) {
+      s = s.replace(abc[i], "")
+      k -= 1
+    }
+  }
+  return s
+}
