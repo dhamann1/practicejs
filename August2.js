@@ -461,3 +461,8 @@ function letterRemoval(s, k){
   }
   return s
 }
+
+// Write a function sum that accepts an unlimited number of integer arguments, and adds all of them together.
+// The function should reject any arguments that are not integers, and sum the remaining integers.
+
+const unlimitedSum = (...arguments) => arguments.filter(arg => Number.isInteger(arg)).reduce((total, value) => total + value, 0)
