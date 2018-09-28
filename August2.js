@@ -466,3 +466,20 @@ function letterRemoval(s, k){
 // The function should reject any arguments that are not integers, and sum the remaining integers.
 
 const unlimitedSum = (...arguments) => arguments.filter(arg => Number.isInteger(arg)).reduce((total, value) => total + value, 0)
+
+
+
+
+ // Return a person's Full Name given their first and last names.
+
+ class firstLast {
+   constructor(firstName, lastName) {
+     this.firstName = firstName;
+     this.lastName = lastName;
+   }
+   getFullName() {
+     var full = this.firstName + " " + this.lastName;
+     return full.trim();
+   }
+
+ }
