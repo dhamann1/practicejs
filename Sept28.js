@@ -24,3 +24,13 @@ function hero(bullets, dragons){
 function repeater(string, n){
   return string.repeat(n)
 }
+
+// Given a string made up of letters a, b, and/or c, switch the position of letters a and b (change a to b and vice versa). Leave any incidence of c untouched.
+
+function switcheroo(string){
+  return string.split('').map(function(e){
+    if (e =='b')return 'a';
+    if (e == 'a') return 'b';
+    if(e=='c') return 'c'
+  }).join('');
+}
