@@ -79,3 +79,7 @@ function pillars(num_pill, dist, width) {
     return sum;
   }
 }
+
+// Your task is to remove all duplicate words from string, leaving only single (first) words entries.
+
+const removeDuplicateWords = s => s.split(' ').filter((w,i,arr)=>arr.indexOf(w)==i).join(' ');
