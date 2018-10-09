@@ -15,23 +15,23 @@ function twiceAsOld(dadYearsOld, sonYearsOld) {
 // Return True if yes, False otherwise
 
 
-function hero(bullets, dragons){
+function hero(bullets, dragons) {
   return bullets >= dragons * 2
 }
 
 // Write a class function named repeat() that takes two arguments (a string and a long integer), and returns a new string where the input string is repeated that many times.
 
-function repeater(string, n){
+function repeater(string, n) {
   return string.repeat(n)
 }
 
 // Given a string made up of letters a, b, and/or c, switch the position of letters a and b (change a to b and vice versa). Leave any incidence of c untouched.
 
-function switcheroo(string){
-  return string.split('').map(function(e){
-    if (e =='b')return 'a';
+function switcheroo(string) {
+  return string.split('').map(function (e) {
+    if (e == 'b') return 'a';
     if (e == 'a') return 'b';
-    if(e=='c') return 'c'
+    if (e == 'c') return 'c'
   }).join('');
 }
 
@@ -56,7 +56,7 @@ function take(arr, n) {
 
 function inviteMoreWomen(L) {
   let sum = 0
-  L.forEach(e=>sum+=e)
+  L.forEach(e => sum += e)
   return sum > 0
 }
 
@@ -68,18 +68,29 @@ function inviteMoreWomen(L) {
 
 function pillars(num_pill, dist, width) {
   if (num_pill == 1) {
-  let sum = 0;
-  return sum;
-  }
-  else if (num_pill == 2) {
-  let sum = ((num_pill - 1) * dist);
-  return sum * 100;
+    let sum = 0;
+    return sum;
+  } else if (num_pill == 2) {
+    let sum = ((num_pill - 1) * dist);
+    return sum * 100;
   } else {
-    let sum = ((num_pill - 1) * dist)*100 + ((num_pill - 2) * width);
+    let sum = ((num_pill - 1) * dist) * 100 + ((num_pill - 2) * width);
     return sum;
   }
 }
 
 // Your task is to remove all duplicate words from string, leaving only single (first) words entries.
 
-const removeDuplicateWords = s => s.split(' ').filter((w,i,arr)=>arr.indexOf(w)==i).join(' ');
+const removeDuplicateWords = s => s.split(' ').filter((w, i, arr) => arr.indexOf(w) == i).join(' ');
+
+// Given any number of boolean flags function should return true if and only if one of them is true while others are false. If function is called without arguments it should return false.
+
+function onlyOne() {
+  let isTrue = 0;
+  for (let i = 0; i < arguments.length; i++) {
+    if (arguments[i]) {
+      isTrue++;
+    }
+  }
+  return isTrue === 1;
+}
