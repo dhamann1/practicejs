@@ -94,3 +94,15 @@ function onlyOne() {
   }
   return isTrue === 1;
 }
+
+
+// Given an array arr, swap its first and last elements and return the resulting array.
+
+function swapArray(arr) {
+  if (arr.length > 1) {
+    let firstNum = arr[0];
+    arr[0] = arr[arr.length-1];
+    arr[arr.length-1] = firstNum;
+  }
+  return arr
+}
