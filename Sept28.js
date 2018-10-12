@@ -114,3 +114,10 @@ function calculate(str) {
 let newStr = str.replace(/plus/g, '+').replace(/minus/g, '-');
 return eval(newStr).toString();
 }
+
+
+function copyList (l) {
+  return l.map(e => e)
+};
+
+const copyList = l => l.slice(); 
