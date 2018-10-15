@@ -134,3 +134,27 @@ const copyList = l => l.slice();
 function maxMultiple(divisor, bound) {
   return Math.floor(bound / divisor) * divisor;
 }
+
+
+
+It returns a boolean value, indicating whether it is possible to reach the number aim from the number 1, by sequentially either adding add or multiplying by mult.
+
+
+function canReach(n, add, mult) {
+  let i = 1;
+let k = 1;
+
+while(i<=n){
+ k = i;
+ 
+ while(k<=n){
+   if(k===n) return true;
+
+   k += add;
+ }
+ if(mult===1) return false;
+ i *= mult;
+}
+ return false;
+
+}
