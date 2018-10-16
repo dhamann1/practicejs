@@ -101,8 +101,8 @@ function onlyOne() {
 function swapArray(arr) {
   if (arr.length > 1) {
     let firstNum = arr[0];
-    arr[0] = arr[arr.length-1];
-    arr[arr.length-1] = firstNum;
+    arr[0] = arr[arr.length - 1];
+    arr[arr.length - 1] = firstNum;
   }
   return arr
 }
@@ -111,12 +111,12 @@ function swapArray(arr) {
 // Example: calculate('1plus2plus3minus4') should return '2'
 
 function calculate(str) {
-let newStr = str.replace(/plus/g, '+').replace(/minus/g, '-');
-return eval(newStr).toString();
+  let newStr = str.replace(/plus/g, '+').replace(/minus/g, '-');
+  return eval(newStr).toString();
 }
 
 
-function copyList (l) {
+function copyList(l) {
   return l.map(e => e)
 };
 
@@ -137,24 +137,35 @@ function maxMultiple(divisor, bound) {
 
 
 
-It returns a boolean value, indicating whether it is possible to reach the number aim from the number 1, by sequentially either adding add or multiplying by mult.
+// It returns a boolean value, indicating whether it is possible to reach the number aim from the number 1, by sequentially either adding add or multiplying by mult.
 
 
 function canReach(n, add, mult) {
   let i = 1;
-let k = 1;
+  let k = 1;
 
-while(i<=n){
- k = i;
- 
- while(k<=n){
-   if(k===n) return true;
+  while (i <= n) {
+    k = i;
 
-   k += add;
- }
- if(mult===1) return false;
- i *= mult;
+    while (k <= n) {
+      if (k === n) return true;
+
+      k += add;
+    }
+    if (mult === 1) return false;
+    i *= mult;
+  }
+  return false;
+
 }
- return false;
 
+
+// Sum the differences between consecutive pairs in the array in descending order.
+
+function sumOfDifferences(arr) {
+  if (arr.length == 0) {
+    return 0;
+  }
+  arr.sort((a, b) => a - b);
+  return arr[arr.length - 1] - arr[0]
 }
