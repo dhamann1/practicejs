@@ -169,3 +169,15 @@ function sumOfDifferences(arr) {
   arr.sort((a, b) => a - b);
   return arr[arr.length - 1] - arr[0]
 }
+
+// Given array of integers, for each position i, search among the previous positions for the last (from the left) position that contains a smaller value. Store this value at position i in the answer. If no such value can be found, store -1 instead.
+
+const arrayPreviousLess = arr => {
+  return arr.map((num, index) => {
+    let i = index;
+    while (i-- > 0){
+      if (arr[i] < num ) {return arr[i]};
+    }
+    return i;
+  });
+}
