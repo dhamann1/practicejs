@@ -195,3 +195,17 @@ const productArray = numbers => {
   let p = numbers.reduce ((a,b) => a*b);
   return numbers.map(x => p/x);
 }
+
+
+
+// Given a number n, return the number of positive odd numbers below n, EASY!
+const oddCount = n => {
+  let count = 0;
+  while(n > 0){
+    n--;
+    if(n % 2 !== 0){
+      count++;
+    }
+  }
+  return count;
+}
