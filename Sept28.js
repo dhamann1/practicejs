@@ -28,7 +28,7 @@ function repeater(string, n) {
 // Given a string made up of letters a, b, and/or c, switch the position of letters a and b (change a to b and vice versa). Leave any incidence of c untouched.
 
 function switcheroo(string) {
-  return string.split('').map(function (e) {
+  return string.split('').map(function(e) {
     if (e == 'b') return 'a';
     if (e == 'a') return 'b';
     if (e == 'c') return 'c'
@@ -175,8 +175,10 @@ function sumOfDifferences(arr) {
 const arrayPreviousLess = arr => {
   return arr.map((num, index) => {
     let i = index;
-    while (i-- > 0){
-      if (arr[i] < num ) {return arr[i]};
+    while (i-- > 0) {
+      if (arr[i] < num) {
+        return arr[i]
+      };
     }
     return i;
   });
@@ -192,8 +194,8 @@ const arrayPreviousLess = arr => {
 // Repeatition of numbers in the array/list could occur.
 
 const productArray = numbers => {
-  let p = numbers.reduce ((a,b) => a*b);
-  return numbers.map(x => p/x);
+  let p = numbers.reduce((a, b) => a * b);
+  return numbers.map(x => p / x);
 }
 
 
@@ -201,9 +203,9 @@ const productArray = numbers => {
 // Given a number n, return the number of positive odd numbers below n, EASY!
 const oddCount = n => {
   let count = 0;
-  while(n > 0){
+  while (n > 0) {
     n--;
-    if(n % 2 !== 0){
+    if (n % 2 !== 0) {
       count++;
     }
   }
@@ -228,4 +230,20 @@ function points(games) {
     }
   });
   return total;
+}
+
+// Write a function that combines two arrays by alternatingly taking elements from each array in turn.
+
+const mergeArrays = (a, b) => {
+  let j = [];
+  let longest = a.length > b.length ? a : b;
+  for (var i = 0; i < longest.length; i++) {
+    if (a[i]) {
+      j.push(a[i]);
+    }
+    if (b[i]) {
+      j.push(b[i]);
+    }
+  }
+  return j;
 }
