@@ -3,3 +3,8 @@ Given an array of numbers, return an array, with each member of input array roun
 const roundToFive = numbers => {
   return numbers.map(elem => Math.round(elem / 5) * 5);
 }
+
+
+// Given an array of numbers, return the difference between the largest and smallest values.
+
+const betweenExtremes = numbers => Math.max(...numbers) - Math.min(...numbers);
