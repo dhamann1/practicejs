@@ -21,3 +21,8 @@ const switcher = x => {
 const sumStr = (a,b) => {
   return String(Number(a) + Number(b));
 }
+
+// Remove the spaces from the string, then return the resultant string.
+
+const noSpace = x => x.split(' ').join(''); 
+
