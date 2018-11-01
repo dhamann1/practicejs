@@ -22,11 +22,11 @@ const sumStr = (a,b) => {
   return String(Number(a) + Number(b));
 }
 
-<<<<<<< HEAD
+
 // This program tests the life of an evaporator containing a gas.
 //
 // We know the content of the evaporator (content in ml), the percentage of foam or gas lost every day (evap_per_day) and the threshold (threshold) in percentage beyond which the evaporator is no longer useful. All numbers are strictly positive.
-//
+// 
 // The program reports the nth day (as an integer) on which the evaporator will be out of use.
 
 
@@ -39,11 +39,3 @@ var gas = 100;
 }
   return days;
 }
-=======
-// Remove the spaces from the string, then return the resultant string.
-
-const noSpace = x => x.split(' ').join(''); 
-
-const noSpace = x => x.replace(/\s/g, ''); 
-
->>>>>>> 04a84a24f85c109195acebe2f7f8f673e8b21b59
