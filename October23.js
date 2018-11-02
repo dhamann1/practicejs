@@ -26,7 +26,7 @@ const sumStr = (a,b) => {
 // This program tests the life of an evaporator containing a gas.
 //
 // We know the content of the evaporator (content in ml), the percentage of foam or gas lost every day (evap_per_day) and the threshold (threshold) in percentage beyond which the evaporator is no longer useful. All numbers are strictly positive.
-// 
+//
 // The program reports the nth day (as an integer) on which the evaporator will be out of use.
 
 
@@ -38,4 +38,20 @@ var gas = 100;
     days++;
 }
   return days;
+}
+
+// Linear Kingdom has exactly one tram line. It has n stops, numbered from 1 to n in the order of tram's movement. At the i-th stop ai passengers exit the tram, while bi passengers enter it. The tram is empty before it arrives at the first stop.
+// Calculate the tram's minimum capacity such that the number of people inside the tram never exceeds this capacity at any time. Note that at each stop all exiting passengers exit before any entering passenger enters the tram
+
+
+function tram(stops, offboarding, onboarding){
+  let capacity = 0;
+  let passengers = 0;
+  for (let i = 0; i < stops; ++i) {
+    passengers += onboarding[i] - offboarding[i];
+    if (capacity < passengers) {
+      capacity = passengers;
+    }
+  }
+  return capacity;
 }
