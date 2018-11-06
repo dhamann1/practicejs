@@ -92,3 +92,10 @@ function factorial(n) {
   if (n === 0) return 1;
   return n * factorial(n-1);
 }
+
+
+// Given an array and a limit value. Check that all values in the array are below or equal to the limit value. If they are, return true. Else, return false.
+
+function smallEnough(array, limit){
+    return array.filter( (value) => value > limit ).length > 0 ? false : true;
+}
