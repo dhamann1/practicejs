@@ -109,3 +109,14 @@ const stringMerge = (s1, s2, l) => s1.slice(0, s1.indexOf(l))+ s2.slice(s2.index
 function abbrevName(name){
   return name.split(' ').map(x => x.substr(0, 1).toUpperCase()).join('.');
 }
+
+
+// var data = [
+//   {name: 'Joe', age: 20},
+//   {name: 'Bill', age: 30},
+//   {name: 'Kate', age: 23}
+// ]
+
+function getNames(data){
+  return data.map(i => i.name);
+}
