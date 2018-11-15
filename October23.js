@@ -84,29 +84,29 @@ function doubleTrouble(x, t) {
 
 
 function amIWilson(p) {
-  var n = (factorial(p-1) + 1) / (p*p);
+  var n = (factorial(p - 1) + 1) / (p * p);
   return n === parseInt(n);
 }
 
 function factorial(n) {
   if (n === 0) return 1;
-  return n * factorial(n-1);
+  return n * factorial(n - 1);
 }
 
 
 // Given an array and a limit value. Check that all values in the array are below or equal to the limit value. If they are, return true. Else, return false.
 
-function smallEnough(array, limit){
-    return array.filter( (value) => value > limit ).length > 0 ? false : true;
+function smallEnough(array, limit) {
+  return array.filter((value) => value > limit).length > 0 ? false : true;
 }
 
 // Given two words and a letter, return a single word that's a combination of both words, merged at the point where the given letter first appears in each word. The returned word should have the beginning of the first word and the ending of the second, with the dividing letter in the middle. You can assume both words will contain the dividing letter.
 
-const stringMerge = (s1, s2, l) => s1.slice(0, s1.indexOf(l))+ s2.slice(s2.indexOf(l));
+const stringMerge = (s1, s2, l) => s1.slice(0, s1.indexOf(l)) + s2.slice(s2.indexOf(l));
 
 // Write a function to convert a name into initials.
 
-function abbrevName(name){
+function abbrevName(name) {
   return name.split(' ').map(x => x.substr(0, 1).toUpperCase()).join('.');
 }
 
@@ -117,6 +117,22 @@ function abbrevName(name){
 //   {name: 'Kate', age: 23}
 // ]
 
-function getNames(data){
+function getNames(data) {
   return data.map(i => i.name);
+}
+
+
+// Complete the method so that it formats the words into a single comma separated value. The last word should be separated by the word 'and' instead of a comma. The method takes in an array of strings and returns a single formatted string. Empty string values should be ignored. Empty arrays or null/nil values being passed into the method should result in an empty string being returned.
+
+function formatWords(words) {
+  if (words === [] || words === null) {
+    return "";
+  };
+  words = words.filter(function (n) {
+    return n !== '';
+  })
+  return words.map(function (a, i) {
+    if (i == words.length - 2) return a + " and";
+    return a + ",";
+  }).join(" ").slice(0, -1);
 }
