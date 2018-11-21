@@ -147,3 +147,7 @@ const capitalsFirst = str => {
   let lower = words.filter(function(x) { return x.charAt(0).match(/[a-z]/) });
   return upper.concat(lower).join(' ');
 }
+
+// Make sure that the second argument (tail), is the same as the last letter of the first argument (body) - otherwise the tail wouldn't fit! If the tail is right return true, else return false.
+
+const correctTail = (bod,tail) => bod[bod.length-1] === tail;
