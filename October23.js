@@ -148,6 +148,12 @@ const capitalsFirst = str => {
   return upper.concat(lower).join(' ');
 }
 
+<<<<<<< HEAD
 // Because Nathan knows it is important to stay hydrated, he drinks 0.5 litres of water per hour of cycling. You get given the time in hours and you need to return the number of litres Nathan will drink, rounded to the smallest value.
 
 const litres = time => Math.floor(time * .5);
+=======
+// Make sure that the second argument (tail), is the same as the last letter of the first argument (body) - otherwise the tail wouldn't fit! If the tail is right return true, else return false.
+
+const correctTail = (bod,tail) => bod[bod.length-1] === tail;
+>>>>>>> d115ff38e80d0a64932bfa43610889e9caec683a
