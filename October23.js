@@ -160,3 +160,7 @@ const litres = time => Math.floor(time * .5);
 // The test cases contain numbers only by mistake.
 
 const corrections = s => s.replace(/0/g,'O').replace(/1/g,'I').replace(/5/g,'S');
+
+//Convert number to strings
+
+const numberToString = num => String(num); 
