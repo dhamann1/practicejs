@@ -163,4 +163,8 @@ const corrections = s => s.replace(/0/g,'O').replace(/1/g,'I').replace(/5/g,'S')
 
 //Convert number to strings
 
-const numberToString = num => String(num); 
+const numberToString = num => String(num);
+
+// Create an any? (JS: any) function that accepts an array and a block (JS: function), and returns true if the block (/function) returns true for any item in the array. If the array is empty, the function should return false.
+
+const any = (arr, fun) => arr.some(fun);
