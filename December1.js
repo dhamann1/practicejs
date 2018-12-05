@@ -14,3 +14,10 @@ for(word of text.split(' ')){
   }
   return newArray.join(' ').toString()
 }
+
+
+// remove every second element out of that array. Always keep the first element and start removing with the next element.
+
+const removeEveryOther = items =>{
+  return items.filter((item,index) => index % 2 === 0);
+}
