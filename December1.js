@@ -21,3 +21,9 @@ for(word of text.split(' ')){
 const removeEveryOther = items =>{
   return items.filter((item,index) => index % 2 === 0);
 }
+
+// Find the anonymous function in the given array and use the function to filter the array
+
+function FindFunction(func, arr){
+  return arr.filter(func.filter(f => typeof f == 'function')[0]);
+}
