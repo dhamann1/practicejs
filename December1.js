@@ -33,3 +33,12 @@ function FindFunction(func, arr) {
 String.prototype.isUpperCase = function() {
   return this == this.toUpperCase() ? true : false;
 }
+
+ // Given a string of space separated numbers, and have to return the highest and lowest number.
+
+const highAndLow = (numbers) => {
+  numbers = numbers.split(' ').map(Number);
+  let min = Math.min.apply(0, numbers);
+  let max = Math.max.apply(0, numbers);
+  return max + ' ' + min;
+}
