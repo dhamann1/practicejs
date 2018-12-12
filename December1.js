@@ -48,5 +48,21 @@ const highAndLow = (numbers) => {
 // Assume test input string always valid and may look like "1 year old" or "5 years old", etc.. The first char is number only.
 
 function getAge(inputString){
-  return parseInt(inputString[0]); 
+  return parseInt(inputString[0]);
+}
+
+
+
+// You will be given this string called campaign:
+// "Hello <NAME>, how is the weather in <CITY> today? We wanted to let you know that <FAVOURITE PRODUCTS> are on sale today only!"
+// You will be given this hash:
+// person = { name : "Sally", city : "Glasgow", favourite_products : "toasters"}.
+// You should return this string:
+// "Hello Sally, how is the weather in Glasgow today? We wanted to let you know that toasters are on sale today only!"
+
+function personalise(campaign, person){
+  campaign = campaign.replace(/<NAME>/g,person.name);
+  campaign = campaign.replace(/<CITY>/g,person.city);
+  campaign = campaign.replace(/<FAVOURITE\sPRODUCTS>/g,person.favourite_products);
+  return campaign;
 }
