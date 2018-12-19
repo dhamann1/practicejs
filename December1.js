@@ -75,3 +75,7 @@ const summation = n => n * (n + 1) / 2;
 // Determine whether the numbers are in ascending order. An array is said to be in ascending order if there are no two adjacent integers where the left integer exceeds the right integer in value.
 
 const inAscOrder = arr => arr.join('') === arr.sort((a, b) => a - b).join('');
+
+
+// Given an array of integers, return a new array with each value doubled.
+const maps = x => x.map(y => y * 2); 
