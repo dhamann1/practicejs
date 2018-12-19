@@ -78,4 +78,8 @@ const inAscOrder = arr => arr.join('') === arr.sort((a, b) => a - b).join('');
 
 
 // Given an array of integers, return a new array with each value doubled.
-const maps = x => x.map(y => y * 2); 
+const maps = x => x.map(y => y * 2);
+
+
+// Create a method that returns true if the function returns true for none of the items in the array. An empty list should return true.
+const none = (arr, fun) => !arr.some(fun);
