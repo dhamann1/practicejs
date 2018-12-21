@@ -30,11 +30,11 @@ function FindFunction(func, arr) {
 
 // Create a method is_uppercase() to see whether the string is ALL CAPS.
 
-String.prototype.isUpperCase = function() {
+String.prototype.isUpperCase = function () {
   return this == this.toUpperCase() ? true : false;
 }
 
- // Given a string of space separated numbers, and have to return the highest and lowest number.
+// Given a string of space separated numbers, and have to return the highest and lowest number.
 
 const highAndLow = (numbers) => {
   numbers = numbers.split(' ').map(Number);
@@ -47,7 +47,7 @@ const highAndLow = (numbers) => {
 // For correct answer program should return int from 0 to 9.
 // Assume test input string always valid and may look like "1 year old" or "5 years old", etc.. The first char is number only.
 
-function getAge(inputString){
+function getAge(inputString) {
   return parseInt(inputString[0]);
 }
 
@@ -60,10 +60,10 @@ function getAge(inputString){
 // You should return this string:
 // "Hello Sally, how is the weather in Glasgow today? We wanted to let you know that toasters are on sale today only!"
 
-function personalise(campaign, person){
-  campaign = campaign.replace(/<NAME>/g,person.name);
-  campaign = campaign.replace(/<CITY>/g,person.city);
-  campaign = campaign.replace(/<FAVOURITE\sPRODUCTS>/g,person.favourite_products);
+function personalise(campaign, person) {
+  campaign = campaign.replace(/<NAME>/g, person.name);
+  campaign = campaign.replace(/<CITY>/g, person.city);
+  campaign = campaign.replace(/<FAVOURITE\sPRODUCTS>/g, person.favourite_products);
   return campaign;
 }
 
@@ -87,3 +87,15 @@ const none = (arr, fun) => !arr.some(fun);
 // Create a method one? (JS one) that accepts two params, a list and a block (JS: a function), and returns true only if the block (/function) returns true for exactly one item in the array
 
 const one = (arr, fun) => arr.filter(fun).length === 1;
+
+Given a number, Find if it is Tidy or not .
+
+function tidyNumber(n) {
+  let result = true;
+  n.toString().split('').sort((a, b) => {
+    if (b < a) {
+      result = false;
+    }
+  });
+  return result;
+}
