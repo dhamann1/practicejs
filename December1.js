@@ -88,7 +88,7 @@ const none = (arr, fun) => !arr.some(fun);
 
 const one = (arr, fun) => arr.filter(fun).length === 1;
 
-Given a number, Find if it is Tidy or not .
+// Given a number, Find if it is Tidy or not .
 
 function tidyNumber(n) {
   let result = true;
@@ -99,3 +99,7 @@ function tidyNumber(n) {
   });
   return result;
 }
+
+// Replace all vowel to exclamation mark in the sentence. aeiouAEIOU is vowel.
+
+const replaceVowel = s => s.replace(/[aeoiu]/ig, '!');
