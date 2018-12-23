@@ -103,3 +103,7 @@ function tidyNumber(n) {
 // Replace all vowel to exclamation mark in the sentence. aeiouAEIOU is vowel.
 
 const replaceVowel = s => s.replace(/[aeoiu]/ig, '!');
+
+// Remove words from the sentence if it contains one exclamation mark. Words are separated by spaces in the sentence. Please remember, one.
+
+const removeOneExclamation = s => s.split(' ').filter(x => x.split('!').length != 2).join(' ');
