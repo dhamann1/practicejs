@@ -9,4 +9,8 @@ const evenNumbers = (array, number) => array.filter(x => x % 2 === 0).slice(-num
 
 // Determine if any of the numbers in the array is the index of the "odd" word. If so, return true, otherwise false.
 
-const oddBall = array => array.includes(array.indexOf("odd")); 
+const oddBall = array => array.includes(array.indexOf("odd"));
+
+// A magic index in an array A[1...n-1] is defined to be an index such that A[i] = i. Given a sorted array of distinct integers, write a method to find a magic index, if one exists, in array A.
+
+const findMagic = arr => arr.findIndex(i => arr[i] === i);
