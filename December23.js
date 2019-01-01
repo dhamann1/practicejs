@@ -15,28 +15,10 @@ const oddBall = array => array.includes(array.indexOf("odd"));
 
 const findMagic = arr => arr.findIndex(i => arr[i] === i);
 
-<<<<<<< HEAD
 // Fix the helper function they wrote so that it works as intended (i.e. make the first character in the string "word" upper case).
 // Don't worry about numbers, special characters, or non-string types being passed to the function. The string lengths will be from 1 character up to 10 characters, but will never be empty.
 
 const capitalizeWord = word => word[0].toUpperCase() + word.slice(1);
-=======
 
-// If you say any of the following words a large bucket of "water" will be dumped on you: "water", "wet", "wash" This is true for any form of those words, like "washing", "watered", etc.
 
-// If you say any of the following phrases you will be doused in "slime": "I don't know", "slime"
-
-// If you say both in one sentence, a combination of water and slime, "sludge", will be dumped on you.
-
-// Write a function, bucketOf(str), that takes a string and determines what will be dumped on your head. If you haven't said anything you shouldn't have, the bucket should be filled with "air". The words should be tested regardless of case.
-
-function bucketOf(str) {
-  str = str.toLowerCase();
-  let water = /water|wet|wash/.test(str);
-  let slime = /i don't know|i dont know|slime/.test(str);
-  if (water && slime) return "sludge";
-  if (water) return "water";
-  if (slime) return "slime";
-  else return "air";
-}
->>>>>>> 987566cc7f8bb8deaf3ffaa51aa21ae81e886c3c
+const parseNumbers = arr => arr.map(num => parseInt(num));
