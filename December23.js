@@ -22,3 +22,7 @@ const capitalizeWord = word => word[0].toUpperCase() + word.slice(1);
 
 
 const parseNumbers = arr => arr.map(num => parseInt(num));
+
+//Sum of even numbers in array
+
+const sumEvenNumbers = a => a.reduce((r, num) => r + (num % 2 ? 0 : num), 0);
