@@ -20,4 +20,10 @@ function capitalize(s){
 
 // Given a string, remove any characters that are unique from the string.
 
-const onlyDuplicates = str => str.split('').filter(letter => str.indexOf(letter) != str.lastIndexOf(letter)).join(''); 
+const onlyDuplicates = str => str.split('').filter(letter => str.indexOf(letter) != str.lastIndexOf(letter)).join('');
+
+
+// Write a function named setAlarm which receives two parameters. The first parameter, employed, is true whenever you are employed and the second parameter, vacation is true whenever you are on vacation.
+// The function should return true if you are employed and not on vacation
+
+const setAlarm = (employed, vacation) => employed && !vacation; 
