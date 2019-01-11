@@ -26,4 +26,7 @@ const onlyDuplicates = str => str.split('').filter(letter => str.indexOf(letter)
 // Write a function named setAlarm which receives two parameters. The first parameter, employed, is true whenever you are employed and the second parameter, vacation is true whenever you are on vacation.
 // The function should return true if you are employed and not on vacation
 
-const setAlarm = (employed, vacation) => employed && !vacation; 
+const setAlarm = (employed, vacation) => employed && !vacation;
+
+// Given a string, return true if the first instance of "x" in the string is immediately followed by the string "xx".
+const tripleX = str => str.substr(str.indexOf('x')+1, 2) === 'xx';
