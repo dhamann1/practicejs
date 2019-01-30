@@ -54,3 +54,21 @@ function objectType() {
     arguments.length ? arguments[0] : null
   );
 }
+
+// Given 2 elevators (named "left" and "right") in a building with 3 floors (numbered 0 to 2), write a function elevator accepting 3 arguments (in order):
+// left - The current floor of the left elevator
+// right - The current floor of the right elevator
+// call - The called floor, i.e. the floor you want to reach
+// It should return the name of the elevator closest to the called floor ("left"/"right").
+// In the case where both elevators are equidistant from the called floor, choose the elevator to the right.
+// You can assume that the inputs will always be valid integers in the closed-open range [0, 3).
+
+//Answer 1
+function elevator(left, right, call) {
+  let distanceLeft = Math.abs(left - call);
+  let distanceRight = Math.abs(right - call);
+  return distanceLeft < distanceRight ? "left" : "right";
+}
+
+//Answer 2
+const elevator = (left, right, call) => Math.abs(left-call) < Math.abs(right-call) ? "left" : "right";
