@@ -81,9 +81,16 @@ const elevator = (left, right, call) => Math.abs(left-call) < Math.abs(right-cal
 // If there is enough space, return 0, and if there isn't, return the number of passengers he can't take.
 
 function enough(cap, on, wait) {
-  let passengerCount = on + wait; 
+  let passengerCount = on + wait;
   if (passengerCount <= cap) return 0;
-  else return passengerCount - cap; 
+  else return passengerCount - cap;
 }
 
-const enough = (cap, on, wait) => (on + wait > cap) ? on+wait-cap : 0; 
+const enough = (cap, on, wait) => (on + wait > cap) ? on+wait-cap : 0;
+
+// Write a function, gooseFilter/goose_filter/GooseFilter, that takes an array of strings as an argument and returns a filtered array containing the same elements but with the 'geese' removed.
+
+const gooseFilter = birds => {
+  let geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
+  return birds.filter(x => !geese.includes(x));
+}
