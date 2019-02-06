@@ -100,3 +100,8 @@ const gooseFilter = birds => {
 // Complete the function/method so that it returns the url with anything after the anchor (#) removed.
 
 const removeUrlAnchor = url => url.split('#')[0];
+
+// Given an array of integers as strings and numbers, return the sum of the array values as if all were numbers.
+// Return your answer as a number.
+
+const sumMix = x => x.map(num => +num).reduce((a,b) => a + b);
