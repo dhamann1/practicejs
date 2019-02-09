@@ -110,3 +110,7 @@ const sumMix = x => x.map(num => +num).reduce((a,b) => a + b);
 // The returned value must be a string, and have "***" between each of its letters. You should not remove or add elements from/to the array.
 
 const twoSort = list => list.sort()[0].split('').join('***'); 
+
+// Write a simple function that takes as a parameter a date object and returns a boolean value representing whether the date is today or not.
+
+const isToday = date => new Date().toDateString() === date.toDateString(); 
