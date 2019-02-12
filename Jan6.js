@@ -119,4 +119,21 @@ const isToday = date => new Date().toDateString() === date.toDateString();
 const DNAtoRNA = dna => dna.replace(/T/g, "U");
 
 // Given an integer n return 'odd' if the number of its divisors is odd. Otherwise return 'even'.
-const oddity = n => Math.sqrt(n) % 1 ? 'even' : 'odd';  
+const oddity = n => Math.sqrt(n) % 1 ? 'even' : 'odd';
+
+// Given a number, Find if it is Balanced or not .
+
+const balancedNum = number => {
+  let stringnumber = String(number);
+  let sumleft = 0;
+  let sumright = 0;
+
+  while (stringnumber.length > 2) {
+    sumleft += parseInt(stringnumber.charAt(0));
+    sumright += parseInt(stringnumber.charAt(stringnumber.length - 1));
+
+    stringnumber = stringnumber.slice(1, stringnumber.length - 1);
+  };
+
+  return sumleft === sumright ? "Balanced" : "Not Balanced";
+}
