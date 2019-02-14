@@ -137,3 +137,7 @@ const balancedNum = number => {
 
   return sumleft === sumright ? "Balanced" : "Not Balanced";
 }
+
+// You'll be passed an array of objects (list) - you must sort them in descending order based on the value of the specified property (sortBy).
+
+const sortList = (sortBy, list) => list.sort((a,b) => b[sortBy] - a[sortBy]);
