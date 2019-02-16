@@ -5,6 +5,8 @@ function factorialRecursion(n) {
   return n * factorial(n - 1);
 }
 
+const factorial = n => n === 0 ? 1 : n * factorial (n-1); 
+
 // Place all people in alphabetical order where Mothers are followed by their children.I.E "aAbaBb" => "AaaBbb".
 
 function findChildren(dancingBrigade) {
