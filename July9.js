@@ -18,6 +18,9 @@ function roundToNext5(n) {
   return n;
 }
 
+const roundToNext5 = n => {while (n % 5 !== 0) {n++;} return n;}
+
+
 // The aim is to compare each pair of integers from 2 arrays, and return a new array of large numbers.
 
 let getLargerNumbers = (a, b) => a.map((x, i) => Math.max(x, b[i]));
@@ -31,5 +34,3 @@ function reverser(sentence){
 // Given a string showing either flat road ("_") or bumps ("n"), work out if you make it home safely. 15 bumps or under, return "Woohoo!", over 15 bumps return "Car Dead".
 
 let bump = string => string.split('n').length >16 ? "Car Dead":"Woohoo!";
-
-
