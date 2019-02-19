@@ -28,6 +28,9 @@ function getEvenNumbers(numbersArray){
   });
 }
 
+const getEvenNumbers = numbersArray => numbersArray.filter(n => n % 2 === 0);
+
+
 // Implement a function, which takes a non-negative integer, representing the number of eggs to boil. It must return the time in minutes (integer), which it takes to have all the eggs boiled.
 // Rules
 // you can put at most 8 eggs into the pot at once
