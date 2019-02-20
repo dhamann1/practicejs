@@ -15,6 +15,8 @@ function splitS(str) {
   return (str + "_").match(/../g);
 }
 
+const splitS = str => (str + '_').match(/../g);
+
 // Given an array (arr) as an argument complete the function countSmileys that should return the total number of smiling faces.
 // Rules for a smiling face:
 // -Each smiley face must contain a valid pair of eyes. Eyes can be marked as : or ;
@@ -123,7 +125,7 @@ function noOdds( values ){
 
 // Complete the solution so that it returns true if the first argument(string) passed in ends with the 2nd argument (also a string).
 
-//Easy way 
+//Easy way
 
 function endsWith(str, ending){
   return str.endsWith(ending);
