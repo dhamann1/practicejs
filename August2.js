@@ -33,9 +33,11 @@ let AmIAfraid = (day, num) => {
 
 // Output will be a valid sorted array with People objects sorted by Age in ascending order
 
-function OrderPeople(people) {
+function orderPeople(people) {
   return people.sort((a, b) => a.age - b.age)
 }
+
+const orderPeople = people => people.sort((a,b) => a.age - b.age));
 
 
 // Return another string such that even-indexed and odd-indexed characters of String are grouped and groups are space-separated
@@ -71,7 +73,7 @@ String.prototype.toAlternatingCase = function() {
 function sum(numbers) {
   return numbers.reduce((a, b) => a + b, 0);
 }
-
+ 
 
 // Create a function with two arguments that will return a list of length (n) with multiples of (x).
 
