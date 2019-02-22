@@ -60,6 +60,7 @@ function bonusTime(salary, bonus) {
   }
 }
 
+const bonusTime = (salary, bonus) => bonus === true ? "$" + salary * 10 : "$" + salary;
 
 // Define String.prototype.toAlternatingCase such that each lowercase letter becomes uppercase and each uppercase letter becomes lowercase.
 
@@ -75,7 +76,7 @@ function sum(numbers) {
 }
 
 const sum = numbers => numbers.reduce((a,b) => a + b, 0);
- 
+
 
 // Create a function with two arguments that will return a list of length (n) with multiples of (x).
 
@@ -86,6 +87,7 @@ function countBy(x, n) {
   }
   return numList;
 }
+
 
 // Given a set of numbers, return the additive inverse of each. Each positive becomes negatives, and the negatives become positives.
 
