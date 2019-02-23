@@ -23,6 +23,8 @@ function tea42(s) {
   return s.toString().replace(/2/g, 't')
 }
 
+const tea42 = s => s.toString().replace(/2/g, 't');
+
 // Given a random string consisting of numbers, letters, symbols, you need to sum up the numbers in the string.
 // Note:
 // Consecutive integers should be treated as a single number. eg, 2015 should be treated as a single number 2015, NOT four numbers
