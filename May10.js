@@ -9,6 +9,9 @@ function peopleBus(busStops) {
   return busAmount;
 }
 
+const peopleBus = busStops => busStops.reduce((p,n) => p+n[0]-n[1],0)
+
+
 // Your friend has troubles with users ending or starting in a ".", and his user-array is a flat array of user-email-pairs.
 // He is only interested in e-mailing the users and ask them to sign up again, so no need to keep the user-name, only e-mail addresses for the user-names that start or end with a "." should be returned. You have to use the filter-method of Javascript.
 
