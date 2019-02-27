@@ -5,6 +5,10 @@ function inArray(a1, a2) {
   return a1.filter(s => str.indexOf(s) !== -1).sort();
 }
 
+const inArray = (a1, a2) => {
+  return a1.filter(s => a2.join(' ').indexOf(s) !== -1).sort();
+}
+
 // Your code must return true or false depending upon whether the given number is a Narcissistic number.
 
 function narcissistic(value) {
