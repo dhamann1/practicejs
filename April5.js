@@ -1,4 +1,4 @@
-// Given an array, find the int that appears an odd number of times. 
+// Given an array, find the int that appears an odd number of times.
 
 function findOdd(a) {
   let numObj = {};
@@ -22,3 +22,5 @@ function findOdd(a) {
 function songDecoder(str) {
   return str.replace(/(WUB)+/g, " ").trim();
 }
+
+const songDecoder = str => str.replace(/(WUB)+/g, " ").trim();
