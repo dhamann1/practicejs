@@ -115,6 +115,7 @@ function same(a, b) {
   return a === b;
 }
 
+
 // You're working in a number zoo, and it seems that one of the numbers has gone missing!
 // Zoo workers have no idea what number is missing, and are too incompetent to figure it out, so they're hiring you to do it for them.
 // In case the zoo loses another number, they want your program to work regardless of how many numbers the zoo has in total.
@@ -126,6 +127,11 @@ function findNumber(arr) {
       return i;
     }
   }
+}
+
+const findNumber = (array) => {
+  let n = array.length;
+  return (n + 2 ) * (n + 1)/2 - array.reduce((x,y) => x + y, 0);
 }
 
 // Karan's company makes software that provides different features based on the version of operating system of the user.
