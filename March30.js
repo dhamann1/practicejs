@@ -38,3 +38,5 @@ function allLongestStrings(inputArray) {
   inputArray.sort((a, b) => b.length - a.length);
   return inputArray.filter(word => word.length === inputArray[0].length);
 }
+
+const allLongestStrings = inputArray => inputArray.sort((a,b) => b.length - a.length).filter(word => word.length === inputArray[0].length);
