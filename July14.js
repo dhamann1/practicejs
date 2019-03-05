@@ -15,6 +15,9 @@ function last(list) {
   return out;
 }
 
+const last = list => list[list.length-1];
+
+
 // Our fruit guy has a bag of fruit (represented as an array of strings) where some fruits are rotten. He wants to replace all the rotten pieces of fruit with fresh ones. For example, given ["apple","rottenBanana","apple"] the replaced array should be ["apple","banana","apple"]. Your task is to implement a method that accepts an array of strings containing fruits should returns an array of strings where all the rotten fruits are replaced by good ones.
 
 
@@ -123,6 +126,7 @@ function numCombo(arr, num) {
   let sum = arr.reduce((a, b) => a + b)
   return arr.filter(x => sum - x == num).length;
 }
+
 // Given a string that may have mixed uppercase and lowercase letters and your task is to convert that string to either lowercase only or uppercase only based on:
 // make as few changes as possible.
 // if the string contains equal number of uppercase and lowercase letters, convert the string to lowercase.
