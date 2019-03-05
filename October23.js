@@ -100,6 +100,8 @@ function smallEnough(array, limit) {
   return array.filter((value) => value > limit).length > 0 ? false : true;
 }
 
+const smallEnough = (numArr, limit) => numArr.filter((value => value > limit)).length > 0 ? false : true; 
+
 // Given two words and a letter, return a single word that's a combination of both words, merged at the point where the given letter first appears in each word. The returned word should have the beginning of the first word and the ending of the second, with the dividing letter in the middle. You can assume both words will contain the dividing letter.
 
 const stringMerge = (s1, s2, l) => s1.slice(0, s1.indexOf(l)) + s2.slice(s2.indexOf(l));
