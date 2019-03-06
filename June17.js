@@ -60,7 +60,7 @@ function capMe(names) {
   return names.map(name => name[0].toUpperCase() + name.slice(1).toLowerCase());
 }
 
-const capMe = names => names.map(name => name[0].toUpperCase() + name.slice(1).toLowerCase()); 
+const capMe = names => names.map(name => name[0].toUpperCase() + name.slice(1).toLowerCase());
 
 //Different Method
 function capMe(names) {
@@ -96,6 +96,7 @@ function largest(n,xs){
   return xs.sort(function(a, b) {return a - b;}).slice(xs.length-n);
 }
 
+const largest = (n,xs) => xs.sort((a,b) => a - b).slice(xs.length-n);
 // Complete the solution so that it returns the number of times the search_text is found within the full_text.
 
 function substringSearch(fullText, searchText){
