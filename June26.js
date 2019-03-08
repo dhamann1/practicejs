@@ -46,9 +46,8 @@ function sumFromString(str) {
 
 // In this exercise, a string is passed to a method and a new string has to be returned with the first character of each word in the string.
 
-function makeString(s) {
-  return s.split(' ').map(a => a[0]).join('');
-}
+
+const makeString = s => s.split(' ').map(a => a[0]).join('');
 
 // Complete the function to find the count of the most frequent item of an array. You can assume that input is an array of integers. For an empty array return 0
 
