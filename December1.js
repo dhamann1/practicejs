@@ -15,6 +15,12 @@ function reOrdering(text) {
   return newArray.join(' ').toString()
 }
 
+const reOrdering = text => {
+  let orderArray = [];
+  text.split(' ').map(word => word[0] == word[0].toUpperCase() ? orderArray.unshift(word) : orderArray.push(word));
+  return orderArray.join(' ')
+}
+
 
 // remove every second element out of that array. Always keep the first element and start removing with the next element.
 
