@@ -18,8 +18,6 @@ function addAny(n) {
   }
 }
 
-
-
 // JavaScript Arrays support a filter function (starting in JavaScript 1.6). Use the filter functionality to complete the function given.
 // The solution would work like the following:
 // getEvenNumbers([2,4,5,6]) // should == [2,4,6]
@@ -142,6 +140,8 @@ function findEmployeesRole(name) {
 function pluck(objs, name) {
   return objs.map((obj) => obj[name]);
 }
+
+const pluck = (objs, name) => objs.map(obj => obj[name]);
 
 // Something is wrong with our Warrior class. The strike method does not work correctly. The following shows an example of this code being used:
 // var ninja = new Warrior('Ninja');
