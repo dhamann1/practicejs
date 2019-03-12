@@ -34,6 +34,17 @@ function uniqueInOrder(iterable) {
   return result;
 }
 
+function uniqueInOrder(it) {
+  let result = [];
+  for (let i = 0; i < it.length; i++) {
+    if (it[i] !== result[result.length - 1]) {
+      result.push(it[i])
+    }
+  }
+  return result;
+}
+
+
 
 // Given a list of integers and a single sum value, return the first two values (parse from the left please) in order of appearance that add up to form the sum.
 
