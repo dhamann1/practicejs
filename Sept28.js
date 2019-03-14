@@ -95,6 +95,7 @@ function onlyOne() {
   return isTrue === 1;
 }
 
+const onlyOne = (...args) => args.filter(x => Boolean(x)).length === 1
 
 // Given an array arr, swap its first and last elements and return the resulting array.
 
