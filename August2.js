@@ -186,10 +186,12 @@ function isDivisible(n, x, y) {
   return n % x === 0 && n % y === 0
 }
 
+const isDivisible = (n,x,y) => n % x === 0 && n % y === 0;
+
 
 // Check if there is gold in the bucket, and if so, return True/true. If not, return False/false.
 
-let checkTheBucket = arr => arr.includes('gold')
+const checkTheBucket = arr => arr.includes('gold')
 
 // Given a number, 3 for example, return a string with a murmur: "1 sheep...2 sheep...3 sheep..."
 
