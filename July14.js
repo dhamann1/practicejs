@@ -102,6 +102,9 @@ function positiveSum(arr) {
   return arr.filter(x => x > 0).reduce((a, b) => a + b, 0);
 }
 
+const positiveSum = arr => arr.filter(x => x > 0).reduce((a,b) => a + b, 0); 
+
+
 
 // Sum all the numbers of the array except the highest and the lowest element (the value, not the index!).
 
