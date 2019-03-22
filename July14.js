@@ -102,7 +102,7 @@ function positiveSum(arr) {
   return arr.filter(x => x > 0).reduce((a, b) => a + b, 0);
 }
 
-const positiveSum = arr => arr.filter(x => x > 0).reduce((a,b) => a + b, 0); 
+const positiveSum = arr => arr.filter(x => x > 0).reduce((a,b) => a + b, 0);
 
 
 
@@ -182,6 +182,11 @@ function monkeyCount(n) {
     num.push(i);
   }
   return num;
+}
+
+function monkeyCount(n) {
+  for (var i = 0, arr = []; i < n; arr.push(++i));
+  return arr;
 }
 
 // Complete the function that takes two numbers as input, num and nth and return the nth digit of num (counting from right to left).
