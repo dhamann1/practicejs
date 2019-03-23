@@ -97,9 +97,7 @@ function largest(n,xs){
 const largest = (n,xs) => xs.sort((a,b) => a - b).slice(xs.length-n);
 // Complete the solution so that it returns the number of times the search_text is found within the full_text.
 
-function substringSearch(fullText, searchText){
-  return fullText.split(searchText).length - 1;
-}
+const substringSearch = (fullText, searchText) => fullText.split(searchText).length-1; 
 
 
 
