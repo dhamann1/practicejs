@@ -24,3 +24,13 @@ const calcType = (a, b, res) =>
   a * b === res ? 'multiplication' :
   a / b === res ? 'division' :
   null;
+
+  // Given a string and an array of index numbers, return the characters of the string rearranged to be in the order specified by the accompanying array.
+  // Ex:
+  // scramble('abcd', [0,3,1,2]) -> 'acdb'
+
+  function scramble(str, arr) {
+    let output = [];
+    arr.forEach((charIdx, i) => output[charIdx] = str[i])
+    return output.join('');
+  };
