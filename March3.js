@@ -34,3 +34,6 @@ const calcType = (a, b, res) =>
     arr.forEach((charIdx, i) => output[charIdx] = str[i])
     return output.join('');
   };
+
+  // You have to return the digits of this number within an array in reverse order.
+  const digitize = n => n.toString().split('').reverse().map(x => parseInt(x));
