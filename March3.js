@@ -37,3 +37,14 @@ const calcType = (a, b, res) =>
 
   // You have to return the digits of this number within an array in reverse order.
   const digitize = n => n.toString().split('').reverse().map(x => parseInt(x));
+
+  // write me a function stringy that takes a size and returns a string of alternating '1s' and '0s'.
+  // the string should start with a 1.
+
+  const stringy = size => {
+  let str = '';
+  for(let i = 1; i <= size; i++){
+    str += i % 2;
+  }
+  return str;
+}
