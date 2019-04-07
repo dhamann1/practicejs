@@ -88,7 +88,6 @@ function countBy(x, n) {
   return numList;
 }
 
-
 // Given a set of numbers, return the additive inverse of each. Each positive becomes negatives, and the negatives become positives.
 
 function invert(array) {
@@ -160,15 +159,15 @@ function whoIsPaying(name) {
   return name.length > 2 ? [name, name.slice(0, 2)] : [name]
 }
 
-Write a
+const whoIsPaying = name => name.length > 2 ? [name, name.slice(0, 2)] : [name]
 
-function called that takes a string of parentheses, and determines
-if the order of the parentheses is valid.The
+// Write a function called that takes a string of parentheses, and determines
+// if the order of the parentheses is valid.The
 
-function should
-return true
-if the string is valid, and false
-if it 's invalid.
+// function should
+// return true
+// if the string is valid, and false
+// if it 's invalid.
 
 function validParentheses(parens) {
   let n = 0;
