@@ -2,6 +2,8 @@
 
 const integrate = (coefficient, exponent) =>  coefficient / (exponent + 1) + 'x^' + (exponent + 1);
 
+// Return the average of the given array rounded down to its nearest integer.
 
+const getAverage = marks => Math.floor(marks.reduce((a, b) => a + b) / marks.length);
 
 
