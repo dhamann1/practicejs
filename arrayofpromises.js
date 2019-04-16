@@ -11,3 +11,11 @@ var promise1 = new Promise(function(resolve, reject) {
   
   console.log(promise1);
   // expected output: [object Promise]
+
+  fetch('http://example.com/movies.json')
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(myJson) {
+    console.log(JSON.stringify(myJson));
+  });
