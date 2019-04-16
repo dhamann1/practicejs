@@ -30,19 +30,11 @@ function set10Seconds () {
 //   Reduce collapses the array of promises into a single promise chain. Allows to run the promises sequentail as opposed to in parallel with Promise.All()
 
 let dataObject = {
-    funcList: [],
+    pList: [],
     addStep: function addStep(func) {
-      this.funcList.push(func);
+      this.pList.push(func);
     },
     runList: function runList () {
-        return this.funcList.reduce((promiseChain, currentTask) => {
-            return promiseChain.then(chainResults =>
-                currentTask.then(currentResult =>
-                    [ ...chainResults, currentResult ]
-                )
-            );
-        }, Promise.resolve([])).then(arrayOfResults => {
-            console.log(arrayOfResults);
-        });
+        return this.pList.reduce((previousPromise, nextPromise) => previousPromise.then(nextPromise), Promise.resolve())
     }
 };
