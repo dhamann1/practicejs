@@ -5,18 +5,20 @@ function getLukeSkywalker() {
 function passFilmTitle(x) {
     return new Promise(function (resolve, reject) {
         setTimeout(function () {
-            resolve(console.log('This is Step 2: ', x));
-        }, 10000);
+            console.log('This is Step 2: ', x);
+            resolve(x);
+        }, 3000);
     });
 }
 
 function getFilmTitle(x) {
     return new Promise(function (resolve, reject) {
         setTimeout(function () {
+            console.log('This is Step 3: ', x);
             resolve(x);
-        }, 1);
+        }, 2000);
     }).then(
-      data => console.log(data)
+      data => data
     );
 }
 
@@ -36,4 +38,4 @@ dataObject.addStep(passFilmTitle);
 dataObject.addStep(getFilmTitle);
 
 
-(dataObject.runList());
+dataObject.runList().then(data => console.log("results: ", data));
