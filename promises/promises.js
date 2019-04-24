@@ -17,9 +17,7 @@ function getFilmTitle(x) {
             console.log('This is Step 3: ', x);
             resolve(x);
         }, 2000);
-    }).then(
-      data => data
-    );
+    })
 }
 
 let dataObject = {
