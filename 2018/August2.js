@@ -216,6 +216,9 @@ const finalGrade = (exam, projects) => {
   return 0;
 }
 
+const finalGrade = (grade, projects) => grade > 90 || projects > 10 ? 100 : grade > 75 && projects > 4 ? 90 : grade > 50 && projects > 1 ? 75 : 0;
+
+
 // Given a number, write a function to output its reverse digits. (e.g. given 123 the answer is 321)
 
 const reverseNumber = n => (n > 0 ? 1 : -1) * Math.abs(n).toString().split('').reverse().join('')
