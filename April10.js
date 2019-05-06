@@ -27,3 +27,8 @@ function shiftLeft(s, t){
   }
   return count
 }
+
+// There are only 2 guaranteed ways to tell if you are speaking to The Loch Ness Monster: A.) It is a 400 foot tall beast from the paleolithic era B.) It will ask you for tree fiddy
+
+const isLochNessMonster = s => s.includes("tree fiddy") || s.includes("3.50");
+
