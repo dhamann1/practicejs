@@ -42,7 +42,7 @@ let dataObject = {
           return accumulator.then(currentVal);
         }
         else {
-          return accumulator(currentVal);
+          return currentVal(accumulator);
         };
       })
     }
