@@ -1,11 +1,9 @@
-function doMath () {
-  return 5 + 5;
+function stevenName () {
+  return 'Steven Speilberg directed '; 
 };
 
-
-
-function getLukeSkywalker() {
-    return fetch("https://swapi.co/api/films/1/").then(data => data.json()).then(data => data.title);
+function getLukeSkywalker(x) {
+    return fetch("https://swapi.co/api/films/1/").then(data => data.json()).then(data => x + data.title);
 }
 
 function passFilmTitle(x) {
@@ -27,7 +25,7 @@ function getFilmTitle(x) {
 }
 
 function changeFilmTitle (x) {
-  x = x + " is a great movie.";
+  x = x + " and it's a great movie.";
   return x;
 }
 
@@ -39,16 +37,18 @@ let dataObject = {
     runList: function runList () {
       return this.pList.reduce((accumulator, currentVal) => {
         if (accumulator instanceof Promise) {
+          console.log('we are in an async function');
           return accumulator.then(currentVal);
         }
         else {
-          return currentVal(accumulator);
+          console.log('we are in a sync function');
+          return currentVal(accumulator());
         };
       })
     }
 };
 
-dataObject.addStep(doMath);
+dataObject.addStep(stevenName);
 dataObject.addStep(getLukeSkywalker);
 dataObject.addStep(changeFilmTitle);
 dataObject.addStep(passFilmTitle);
@@ -57,6 +57,6 @@ dataObject.addStep(getFilmTitle);
 
 
 
-console.log(getLukeSkywalker() instanceof Promise);
+// console.log(getLukeSkywalker() instanceof Promise);
 
 dataObject.runList().then(data => console.log("results: ", data));
