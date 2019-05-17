@@ -1,6 +1,8 @@
-function stevenName () {
-  return 'Steven Speilberg directed '; 
-};
+// function stevenName () {
+//   return 'Steven Speilberg directed '; 
+// };
+
+let x = 'Steven Speilberg directed '; 
 
 function getLukeSkywalker(x) {
     return fetch("https://swapi.co/api/films/1/").then(data => data.json()).then(data => x + data.title);
@@ -48,7 +50,7 @@ let dataObject = {
     }
 };
 
-dataObject.addStep(stevenName);
+// dataObject.addStep(stevenName);
 dataObject.addStep(getLukeSkywalker);
 dataObject.addStep(changeFilmTitle);
 dataObject.addStep(passFilmTitle);
