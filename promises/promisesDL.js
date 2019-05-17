@@ -71,8 +71,8 @@ let dataObject = {
 
 dataObject.addStep(getObj); 
 
-dataObject.addStep(changeSeriesYear);
 dataObject.addStep(addUserFacebook);
+dataObject.addStep(changeSeriesYear);
 dataObject.addStep(addDealerCity);
 dataObject.addStep(addUserContactPreference);
 
