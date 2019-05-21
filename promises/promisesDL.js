@@ -16,15 +16,34 @@ function getObj () {
 // });
 
 
-function addUserFacebook(x) {
-    return new Promise(function (resolve, reject) {
-        setTimeout(function () {
-            x.user_used_facebook = 'true';
-            // console.log('This is Step 2: ', x);
-            resolve(x);
-        }, 3000);
-    });
+// function addUserFacebook(x) {
+//     return new Promise(function (resolve, reject) {
+//         setTimeout(function () {
+//             x.user_used_facebook = 'true';
+//             // console.log('This is Step 2: ', x);
+//             resolve(x);
+//         }, 3000);
+//     });
+// };
+
+var addUserFacebook =  (function () {
+  var userFacebook;
+  function getFacebook (x) {
+  if (userFacebook === false || userFacebook === true){
+    return userFacebook;
+  }
+  return new Promise(function(resolve, reject) {
+    setTimeout(function() {
+      x.user_used_facebook = true;
+      userFacebook = x.user_used_facebook;
+      resolve(x);
+    }, 5000);
+  });
 };
+return getFacebook;
+}());
+
+
 
 function changeSeriesYear (x) {
   x.series_year = 2018;
