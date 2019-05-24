@@ -43,3 +43,9 @@ const pillars = (numPill, dist, width) => {
   const pillars = numPill > 2 ? (numPill-2) * width : 0
   return distance + pillars
 }
+
+// Write a function last that accepts a list and returns the last element in the list.
+// If the list is empty:
+// In languages that have a built-in option or result type (like OCaml or Haskell), return an empty option
+
+const last = xs => xs.length == 0 ? null : xs.pop(); 
