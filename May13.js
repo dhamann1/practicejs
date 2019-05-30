@@ -39,3 +39,7 @@ const getMiddle = s => {
   let middle = s.length/2; 
   return s.length % 2 ? s.charAt(Math.floor(middle)) : s.slice (middle -1, middle + 1); 
 }
+
+// Given a string of digits, you should replace any digit below 5 with '0' and any digit 5 and above with '1'. Return the resulting string.
+
+const fakeBin = x =>  x.split('').map(n => n < 5 ? 0 : 1).join('');
