@@ -43,3 +43,12 @@ const getMiddle = s => {
 // Given a string of digits, you should replace any digit below 5 with '0' and any digit 5 and above with '1'. Return the resulting string.
 
 const fakeBin = x =>  x.split('').map(n => n < 5 ? 0 : 1).join('');
+
+// Write a function called which verifies that a coupon code is valid, the coupon is not expired.
+// A coupon is no more valid on the day AFTER the expiration date. All dates will be passed as strings in this format: "MONTH DATE, YEAR".
+
+function checkCoupon(enteredCode, correctCode, currentDate, expirationDate){
+  var cd = new Date(currentDate);
+  var ed = new Date(expirationDate);
+  return (enteredCode === correctCode) && (ed >= cd);
+}
