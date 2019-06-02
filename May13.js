@@ -63,3 +63,5 @@ function checkCoupon(enteredCode, correctCode, currentDate, expirationDate){
 const cannonsReady = gunners => {
   return Object.values(gunners).every(response => response === 'aye') ? 'Fire!' : 'Shiver me timbers!'
 }
+
+const formatMoney = amount => '$' + amount.toFixed(2); 
