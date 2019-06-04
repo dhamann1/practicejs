@@ -65,3 +65,7 @@ const cannonsReady = gunners => {
 }
 
 const formatMoney = amount => '$' + amount.toFixed(2); 
+
+// You are given two angles (in degrees) of a triangle. Write a function to return the 3rd.
+
+const otherAngle = (a, b) => 180 - a - b
