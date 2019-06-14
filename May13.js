@@ -96,3 +96,10 @@ function updateLight(current) {
 function betterThanAverage(classPoints, yourPoints) {
   return yourPoints > classPoints.reduce((a, b) => a + b, 0) / classPoints.length; 
 }
+
+// You are given two sorted arrays that contain only integers. Your task is to find a way to merge them into a single one, sorted in ascending order. Complete the function mergeArrays(arr1, arr2), where arr1 and arr2 are the original sorted arrays.
+
+function mergeArrays(arr1, arr2) {
+  var sortedArr = arr1.concat(arr2).sort((a, b) => a - b);
+  return sortedArr.filter((el, pos) => sortedArr.indexOf(el) === pos);
+}
