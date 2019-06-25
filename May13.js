@@ -103,3 +103,9 @@ function mergeArrays(arr1, arr2) {
   var sortedArr = arr1.concat(arr2).sort((a, b) => a - b);
   return sortedArr.filter((el, pos) => sortedArr.indexOf(el) === pos);
 }
+
+// Complete the solution so that it returns a formatted string. The return value should equal "Value is VALUE" where value is a 5 digit padded number.
+
+function paddedNumbers(value){
+  return "Value is " + ("00000" + value).slice(-5);
+}
