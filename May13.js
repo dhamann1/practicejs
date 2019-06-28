@@ -120,3 +120,11 @@ function paddedNumbers(value){
 // If the sum of the three parameters (as described above) is > 22, return 'Sabbatical! Boom!', else return 'Back to your desk, boy.'.
 
 const sabb = (x, val, happ) => x.split('').reduce((s,a)=> s + 'sabbatical'.includes(a) , 0) + val + happ > 22 ? 'Sabbatical! Boom!' :  'Back to your desk, boy.';
+
+// Write a function that returns the total surface area and volume of a box as an array: [area, volume].
+
+function getSize(w, h, d){
+  var area = (2*d*h) + (2*w*h) + (2*d*w);
+  var volume = d*w*h;
+  return [area, volume];
+}
