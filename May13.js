@@ -128,3 +128,12 @@ function getSize(w, h, d){
   var volume = d*w*h;
   return [area, volume];
 }
+
+// Given a number, Find if it is Disarium or not
+
+function disariumNumber(n){
+  let chk = 0;
+  n.toString().split('').map((n,i) => chk += Math.pow(parseInt(n),i+1));
+  return (chk === n ? 'Disarium !!' : 'Not !!');
+}
+
