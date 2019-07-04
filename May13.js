@@ -137,3 +137,29 @@ function disariumNumber(n){
   return (chk === n ? 'Disarium !!' : 'Not !!');
 }
 
+
+// Given an array of numbers, return a string made up of four parts:
+
+// a) a four character 'word', made up of the characters derived from the first two and last two numbers in the array. order should be as read left to right (first, second, second last, last),
+
+// b) the same as above, post sorting the array into ascending order,
+
+// c) the same as above, post sorting the array into descending order,
+
+// d) the same as above, post converting the array into ASCII characters and sorting alphabetically.
+
+// The four parts should form a single string, each part separated by a hyphen: '-'
+
+
+function numsToCharString (arr) {
+  return String.fromCharCode(arr[0], arr[1], arr[arr.length - 2], arr[arr.length - 1])
+};
+
+function sortTransform(a){
+  const str1 = numsToCharString(a);
+  const str2 = numsToCharString(a.sort((a, b) => a - b));
+  const str3 = numsToCharString(a.sort((a, b) => b - a));
+  const str4 = [...str3].sort((a, b) => a > b).join('');
+  
+  return [str1, str2, str3, str4].join('-')
+}
