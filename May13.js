@@ -163,3 +163,20 @@ function sortTransform(a){
   
   return [str1, str2, str3, str4].join('-')
 }
+
+
+// Create change_count() to return a dollar amount of how much change you have!
+
+function changeCount( change ){
+  let obj = {
+    'penny': 0.01,
+    'nickel': 0.05,
+    'dime': 0.10,
+    'quarter': 0.25,
+    'dollar': 1.00
+  }
+  
+  let arr = change.split(' ');
+  
+  return '$' + arr.reduce((sum, current) => sum + obj[current],0).toFixed(2);
+}
