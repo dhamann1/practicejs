@@ -180,3 +180,17 @@ function changeCount( change ){
   
   return '$' + arr.reduce((sum, current) => sum + obj[current],0).toFixed(2);
 }
+
+// Create a function that takes a 2D array as an input, and outputs another array that contains the average values for the numbers in the nested arrays at the corresponding indexes.
+
+function avgArray(arr) {
+  let ar=[];
+  for (let i=0; i<arr[0].length; ++i)
+  {
+    let sum=0;
+    for (let j=0; j<arr.length; ++j)
+      sum+=arr[j][i];
+    ar.push(sum/arr.length)
+  }
+  return ar;
+}
