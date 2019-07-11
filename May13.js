@@ -194,3 +194,11 @@ function avgArray(arr) {
   }
   return ar;
 }
+
+// Every given word has a doubled letter, like 'tt' in lettuce.
+// To answer the right number you need to find the doubled letter's position of the given word in the alphabet and multiply this number per 3.
+// It will be given only words with one doubled letter.
+
+// The function passTheDoorMan with a given string word shall return the right number.
+
+const passTheDoorMan = word => (word.match(/(.)\1/)[1].charCodeAt() - 96) * 3
