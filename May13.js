@@ -202,3 +202,12 @@ function avgArray(arr) {
 // The function passTheDoorMan with a given string word shall return the right number.
 
 const passTheDoorMan = word => (word.match(/(.)\1/)[1].charCodeAt() - 96) * 3
+
+
+
+// Given an array of numbers, check if any of the numbers are the character codes for lower case vowels (a, e, i, o, u).
+// If they are, change the array value to a string of that vowel.
+// Return the resulting array.
+
+const v={"97":"a","101":"e","105":"i","111":"o","117":"u"}
+const isVow=a=>a.map(x=>v[x]||x)
