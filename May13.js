@@ -211,3 +211,19 @@ const passTheDoorMan = word => (word.match(/(.)\1/)[1].charCodeAt() - 96) * 3
 
 const v={"97":"a","101":"e","105":"i","111":"o","117":"u"}
 const isVow=a=>a.map(x=>v[x]||x)
+
+// Given an array/list [] of integers , Find all the LEADERS in the array.
+
+const arrayLeaders = numbers => {
+  let leaders = [];
+  
+  numbers.forEach((num, i, arr) => {
+    const sum = arr.slice(i+1).reduce((acc,val) => acc + val, 0);
+
+    if (num > sum) {
+      leaders.push(num);
+    }
+  });
+  
+  return leaders;
+}
