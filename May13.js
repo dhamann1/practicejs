@@ -97,6 +97,7 @@ function betterThanAverage(classPoints, yourPoints) {
   return yourPoints > classPoints.reduce((a, b) => a + b, 0) / classPoints.length; 
 }
 
+<<<<<<< HEAD
 // Given an array of N integers, you have to find how many times you have to add up the smallest numbers in the array until their Sum becomes greater or equal to K.
 
 function minimumSteps(numbers, value) {
@@ -114,4 +115,146 @@ function minimumSteps(numbers, value) {
 
 function maxProduct(numbers, size){
   return numbers.sort((a, b) => b - a).slice(0, size).reduce((a, b) => a * b);
+=======
+// You are given two sorted arrays that contain only integers. Your task is to find a way to merge them into a single one, sorted in ascending order. Complete the function mergeArrays(arr1, arr2), where arr1 and arr2 are the original sorted arrays.
+
+function mergeArrays(arr1, arr2) {
+  var sortedArr = arr1.concat(arr2).sort((a, b) => a - b);
+  return sortedArr.filter((el, pos) => sortedArr.indexOf(el) === pos);
+}
+
+// Complete the solution so that it returns a formatted string. The return value should equal "Value is VALUE" where value is a 5 digit padded number.
+
+function paddedNumbers(value){
+  return "Value is " + ("00000" + value).slice(-5);
+}
+
+
+
+// You need to approach your boss. Her decision will be based on three parameters:
+// val=your value to the organisation
+// happ=her happiness level at the time of asking and finally
+// The numbers of letters from 'sabbatical' that are present in string 'x'.
+// Note that if x contains three instances of the letter 'l', that still scores three points, even though there is only one in the word sabbatical.
+// If the sum of the three parameters (as described above) is > 22, return 'Sabbatical! Boom!', else return 'Back to your desk, boy.'.
+
+const sabb = (x, val, happ) => x.split('').reduce((s,a)=> s + 'sabbatical'.includes(a) , 0) + val + happ > 22 ? 'Sabbatical! Boom!' :  'Back to your desk, boy.';
+
+// Write a function that returns the total surface area and volume of a box as an array: [area, volume].
+
+function getSize(w, h, d){
+  var area = (2*d*h) + (2*w*h) + (2*d*w);
+  var volume = d*w*h;
+  return [area, volume];
+}
+
+// Given a number, Find if it is Disarium or not
+
+function disariumNumber(n){
+  let chk = 0;
+  n.toString().split('').map((n,i) => chk += Math.pow(parseInt(n),i+1));
+  return (chk === n ? 'Disarium !!' : 'Not !!');
+}
+
+
+// Given an array of numbers, return a string made up of four parts:
+
+// a) a four character 'word', made up of the characters derived from the first two and last two numbers in the array. order should be as read left to right (first, second, second last, last),
+
+// b) the same as above, post sorting the array into ascending order,
+
+// c) the same as above, post sorting the array into descending order,
+
+// d) the same as above, post converting the array into ASCII characters and sorting alphabetically.
+
+// The four parts should form a single string, each part separated by a hyphen: '-'
+
+
+function numsToCharString (arr) {
+  return String.fromCharCode(arr[0], arr[1], arr[arr.length - 2], arr[arr.length - 1])
+};
+
+function sortTransform(a){
+  const str1 = numsToCharString(a);
+  const str2 = numsToCharString(a.sort((a, b) => a - b));
+  const str3 = numsToCharString(a.sort((a, b) => b - a));
+  const str4 = [...str3].sort((a, b) => a > b).join('');
+  
+  return [str1, str2, str3, str4].join('-')
+}
+
+
+// Create change_count() to return a dollar amount of how much change you have!
+
+function changeCount( change ){
+  let obj = {
+    'penny': 0.01,
+    'nickel': 0.05,
+    'dime': 0.10,
+    'quarter': 0.25,
+    'dollar': 1.00
+  }
+  
+  let arr = change.split(' ');
+  
+  return '$' + arr.reduce((sum, current) => sum + obj[current],0).toFixed(2);
+}
+
+// Create a function that takes a 2D array as an input, and outputs another array that contains the average values for the numbers in the nested arrays at the corresponding indexes.
+
+function avgArray(arr) {
+  let ar=[];
+  for (let i=0; i<arr[0].length; ++i)
+  {
+    let sum=0;
+    for (let j=0; j<arr.length; ++j)
+      sum+=arr[j][i];
+    ar.push(sum/arr.length)
+  }
+  return ar;
+}
+
+// Every given word has a doubled letter, like 'tt' in lettuce.
+// To answer the right number you need to find the doubled letter's position of the given word in the alphabet and multiply this number per 3.
+// It will be given only words with one doubled letter.
+
+// The function passTheDoorMan with a given string word shall return the right number.
+
+const passTheDoorMan = word => (word.match(/(.)\1/)[1].charCodeAt() - 96) * 3
+
+
+
+// Given an array of numbers, check if any of the numbers are the character codes for lower case vowels (a, e, i, o, u).
+// If they are, change the array value to a string of that vowel.
+// Return the resulting array.
+
+const v={"97":"a","101":"e","105":"i","111":"o","117":"u"}
+const isVow=a=>a.map(x=>v[x]||x)
+
+// Given an array/list [] of integers , Find all the LEADERS in the array.
+
+const arrayLeaders = numbers => {
+  let leaders = [];
+  
+  numbers.forEach((num, i, arr) => {
+    const sum = arr.slice(i+1).reduce((acc,val) => acc + val, 0);
+
+    if (num > sum) {
+      leaders.push(num);
+    }
+  });
+  
+  return leaders;
+}
+
+
+// A Nice array is defined to be an array where for every value n in the array, there is also an element n-1 or n+1 in the array.
+// Write a function named isNice/IsNice that returns true if its array argument is a Nice array, else false. You should also return false if input array has no elements.
+
+function isNice(arr) {
+  if (arr.length === 0) {
+      return false;
+  }
+  return arr.every(item => arr.includes(item + 1) || arr.includes(item - 1))
+>>>>>>> c271299ece00a6c532b81091914c341aaebca5c4
 }
