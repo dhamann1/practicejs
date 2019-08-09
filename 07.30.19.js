@@ -7,3 +7,13 @@ const removeDuplicates = row => row.filter((x, i) => row.lastIndexOf(x) === i)
 function sumOfABeach (beach) {
     return beach.split(/sand|water|fish|sun/gi).length - 1
   }
+
+  Given an array of integers , Find the maximum product obtained from multiplying 2 adjacent numbers in the array.
+
+  function adjacentElementsProduct(array) {
+    let adjacentNumbersArray = [];
+    for (let i=0; i<array.length-1; i++){
+      adjacentNumbersArray.push(array[i] * array[i+1]);
+    }
+    return Math.max(...adjacentNumbersArray);
+  }
