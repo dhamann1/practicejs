@@ -28,3 +28,10 @@ function hasOneChar(s) {
     return s === s[0].repeat(s.length)
   }
   
+
+  // Given an array of words, return an array of the number of letters that occupy their positions in the alphabet for each word.
+
+  function alphabetSymmetry (arr) {
+    var alphabet = "abcdefghijklmnopqrstuvwxyz";
+    return arr.map(x => x.toLowerCase().split('').filter((letter, index) => index === alphabet.indexOf(letter)).length);
+  }
