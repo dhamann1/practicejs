@@ -35,3 +35,21 @@ function hasOneChar(s) {
     var alphabet = "abcdefghijklmnopqrstuvwxyz";
     return arr.map(x => x.toLowerCase().split('').filter((letter, index) => index === alphabet.indexOf(letter)).length);
   }
+
+
+//create a rock, paper, scissors function. 
+
+function rps (p1, p2) {
+  var map = {
+    'rock': 'scissors',
+    'scissors': 'paper',
+    'paper': 'rock'
+  };
+  
+  if (p1 == p2) {
+    return 'Draw!';
+  } else {
+    return 'Player ' + (map[p1] == p2 ? 1 : 2) + ' won!';
+  }
+};
+  
