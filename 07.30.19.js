@@ -53,3 +53,13 @@ function rps (p1, p2) {
   }
 };
   
+
+
+function palindrome(num) { 
+  
+  if (!Number.isInteger(num) || num < 0) {
+      return "Not valid";
+  }
+  
+  return (num == num.toString().split("").reverse().join("")) ? true : false;
+} 
