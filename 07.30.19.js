@@ -63,3 +63,7 @@ function palindrome(num) {
   
   return (num == num.toString().split("").reverse().join("")) ? true : false;
 } 
+
+// Given a year, return the century it is in.
+
+const centuryFromYear = year => Math.ceil(year/100)
