@@ -67,3 +67,9 @@ function palindrome(num) {
 // Given a year, return the century it is in.
 
 const centuryFromYear = year => Math.ceil(year/100)
+
+// A function sumAverage(arr) where arr is an array containing arrays full of numbers
+
+const sum = (a,b)=>a+b
+const getAverage = a => a.reduce(sum,0)/a.length
+const sumAverage = A => Math.floor(A.map(getAverage).reduce(sum,0))
