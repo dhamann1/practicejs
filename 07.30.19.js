@@ -73,3 +73,8 @@ const centuryFromYear = year => Math.ceil(year/100)
 const sum = (a,b)=>a+b
 const getAverage = a => a.reduce(sum,0)/a.length
 const sumAverage = A => Math.floor(A.map(getAverage).reduce(sum,0))
+
+
+// Given an array of integers, Find the Nth smallest element in this array of integers
+
+const nthSmallest = (a, n) => a.sort((x, y) => x - y)[n - 1];
