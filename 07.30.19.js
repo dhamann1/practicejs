@@ -78,3 +78,10 @@ const sumAverage = A => Math.floor(A.map(getAverage).reduce(sum,0))
 // Given an array of integers, Find the Nth smallest element in this array of integers
 
 const nthSmallest = (a, n) => a.sort((x, y) => x - y)[n - 1];
+
+
+// Create a method that takes an array as an input, and outputs the index at which the sole odd number is located.
+
+function oddOne(arr) {
+  return arr.findIndex((num) => (num % 2 != 0))
+}
