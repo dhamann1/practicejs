@@ -109,3 +109,16 @@ function scoreboard (string) {
   var scoreTwo = string.split(' ').reverse()[0];
   return [numbers[scoreOne], numbers[scoreTwo]];
 }
+
+// Given a positive integer N , Return the extra perfect numbers in range from 1 to N .
+// Extra perfect number is the number that first and last bits are set bits.
+
+
+function extraPerfect(n){
+  var numArray = [];
+  
+  for (var i = 1; i <= n; i += 2) {
+    numArray.push(i)
+  }
+  return numArray;
+}
