@@ -122,3 +122,9 @@ function extraPerfect(n){
   }
   return numArray;
 }
+
+
+//Find the mean of an array 
+const findAverage = nums => nums.reduce((a, b) => a + b) / nums.length;
+
+
