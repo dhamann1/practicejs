@@ -128,3 +128,24 @@ function extraPerfect(n){
 const findAverage = nums => nums.reduce((a, b) => a + b) / nums.length;
 
 
+// check the provided array (x) for good ideas 'good' and bad ideas 'bad'. If there are one or two good ideas, return 'Publish!', if there are more than 2 return 'I smell a series!'. If there are no good ideas, as is often the case, return 'Fail!'.
+
+function well (x) {
+  let ideas = x.filter(y=>y==='good').length
+    switch (true) {
+      case ideas == 0: return 'Fail!'; break;
+      case ideas < 3: return 'Publish!'; break;
+      case ideas > 2: return 'I smell a series!'
+    }
+  
+  }
+
+
+function generateRange(min, max, step){
+  let arr = [];
+    while (min <= max) {
+      arr.push(min);
+      min += step;
+    }
+  return arr
+  }
