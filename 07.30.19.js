@@ -149,3 +149,18 @@ function generateRange(min, max, step){
     }
   return arr
   }
+
+
+  // You are given a list of numbers. The numbers each repeat a certain number of times. Remove all numbers that repeat an odd number of times while keeping everything else the same.
+
+  function oddOnesOut (nums) {
+    var numCount = {};
+    nums.forEach (x => {
+      if (numCount[x]){
+        numCount[x]++;
+      } else {
+        numCount[x] = 1; 
+      }
+    });
+    return nums.filter(y => numCount[y] % 2 === 0);
+  }
