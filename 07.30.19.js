@@ -177,3 +177,23 @@ function getAges (sum,difference){
   if (x < 0 || y < 0){return null;}
   return [x,y];
 }
+
+
+// The vowel substrings in the word codewarriors are o,e,a,io. The longest of these has a length of 2. Given a lowercase string that has alphabetic characters only and no spaces, return the length of the longest vowel substring. Vowels are any of aeiou.
+
+function longestVowelChain(s){
+  var vowels = ['a','e','i','o', 'u'];
+  var count = 0;
+  var highestCount = 0;
+  for(var i = 0; i < s.length - 1; i++){
+    if (vowels.includes(s[i]) && vowels.includes(s[i + 1])) {
+      count++;
+    } else {
+      if (highestCount < count) {
+      highestCount = count;
+      }
+    count = 1;
+    }
+  }
+  return highestCount; 
+}
