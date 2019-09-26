@@ -197,3 +197,8 @@ function longestVowelChain(s){
   }
   return highestCount; 
 }
+
+
+// We need a function that counts the number of sheep present in the array (true means present).
+
+const countSheeps = arrayOfSheeps => arrayOfSheeps.filter(s => s).length;
