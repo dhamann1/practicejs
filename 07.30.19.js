@@ -202,3 +202,10 @@ function longestVowelChain(s){
 // We need a function that counts the number of sheep present in the array (true means present).
 
 const countSheeps = arrayOfSheeps => arrayOfSheeps.filter(s => s).length;
+
+// Give you a function ```animal```, accept 1 parameter:```obj``` like this:
+// {name:"dog",legs:4,color:"white"}
+// and return a string like this:
+// "This white dog has 4 legs."
+
+const animal = o => `This ${o.color} ${o.name} has ${o.legs} legs.`;
