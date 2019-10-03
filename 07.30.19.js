@@ -209,3 +209,15 @@ const countSheeps = arrayOfSheeps => arrayOfSheeps.filter(s => s).length;
 // "This white dog has 4 legs."
 
 const animal = o => `This ${o.color} ${o.name} has ${o.legs} legs.`;
+
+
+
+// We'll create a function match which takes a candidate and a job, which will either return a boolean indicating whether the job is a valid match for the candidate.
+// For a valid match, the candidate's minimum salary must be less than or equal to the job's maximum salary. However, let's also include 10% wiggle room (deducted from the candidate's minimum salary) 
+
+const match = (candidate, job ) => {
+  if(!candidate.minSalary  || !job.maxSalary) {
+    return "Error"; 
+  }
+   return  candidate.minSalary - candidate.minSalary/10 <= job.maxSalary 
+  }
