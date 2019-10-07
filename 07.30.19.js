@@ -221,3 +221,8 @@ const match = (candidate, job ) => {
   }
    return  candidate.minSalary - candidate.minSalary/10 <= job.maxSalary 
   }
+
+function findScreenHeight(width, ratio){
+    var ratioSplit = ratio.split(':');
+    return width +'x'+ width/ratioSplit[0]*ratioSplit[1];
+  }
