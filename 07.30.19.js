@@ -226,3 +226,9 @@ function findScreenHeight(width, ratio){
     var ratioSplit = ratio.split(':');
     return width +'x'+ width/ratioSplit[0]*ratioSplit[1];
   }
+
+  // Given 2 strings, a and b, return a string of the form short+long+short, with the shorter string on the outside and the longer string on the inside.
+  
+function shortLongShort (a,b) {
+  return a.length > b.length ? b+a+b : a+b+a; 
+}
