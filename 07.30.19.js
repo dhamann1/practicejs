@@ -237,3 +237,11 @@ function shortLongShort (a,b) {
 function isDivideBy (number, a, b){
   return number % a == 0 && number % b == 0; 
 } 
+
+// Is every value in the array an array?
+
+function arrCheck(val) {
+  return val.every(function(x) {
+    return Array.isArray(x);
+  });
+};
