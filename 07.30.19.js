@@ -245,3 +245,11 @@ function arrCheck(val) {
     return Array.isArray(x);
   });
 };
+
+// Return the area of a circle with the given radius. Round the returned number to two decimal places
+function circleArea (radius) {
+  if (isNaN(radius) || radius <= 0){
+    return false;
+  }
+  return parseFloat((Math.PI * radius * radius).toFixed(2));
+};
