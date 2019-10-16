@@ -253,3 +253,14 @@ function circleArea (radius) {
   }
   return parseFloat((Math.PI * radius * radius).toFixed(2));
 };
+
+// Implement the method length, which accepts a linked list (head), and returns the length of the list.
+
+function length(head) {
+  var currentNode = head;
+  for (var i = 0;currentNode; i++) {  
+    currentNode = currentNode.next
+  } 
+  return i;
+}
+
