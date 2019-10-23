@@ -264,3 +264,13 @@ function length(head) {
   return i;
 }
 
+// Find the first element of an array that is not consecutive.
+
+function firstNonConsecutive (arr) {
+  for (var i = 0; i < arr.length; i++) {
+    if ((arr[i]-arr[0]) !== i) {
+      return arr[i];
+    }
+  }
+  return null;
+}
