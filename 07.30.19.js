@@ -299,3 +299,25 @@ const areYouPlayingBanjo = name => {
 const areYouPlayingBanjo = name => {
   return name[0].toLowerCase() == 'r' ? name + " plays banjo" : name + " does not play banjo";
 }
+
+// if bmi <= 18.5 return "Underweight"
+
+// if bmi <= 25.0 return "Normal"
+
+// if bmi <= 30.0 return "Overweight"
+
+// if bmi > 30 return "Obese"
+
+function bmi(weight, height) {
+  var val = weight / (height * height);
+  if(val <= 18.5) {
+    return 'Underweight';
+  }
+  if(val <= 25.0) {
+    return 'Normal';
+  }
+  if(val <= 30.0) {
+    return 'Overweight';
+  }
+  return 'Obese';
+}
