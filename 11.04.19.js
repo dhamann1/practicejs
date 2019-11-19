@@ -23,3 +23,14 @@ function numberTest (array) {
       })
   }
 }
+
+
+
+Write a function which takes its speed in km per hour and returns it in cm per second, rounded down to the integer
+
+function cockroachSpeed(s) {
+  var centsInKilo = 100000;
+  var secsInHour = 3600;
+  
+  return Math.floor((s*centsInKilo)/secsInHour);
+}
