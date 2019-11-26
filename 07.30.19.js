@@ -333,3 +333,10 @@ function bmi(weight, height) {
 function validateUser(username) {
   return (/^[a-z_0-9]{4,16}$/.test(username));
 }
+
+// Take a number and check each digit if it is divisible by the digit on its left checked and return an array of booleans.
+// The booleans should always start with false becase there is no digit before the first one.
+
+function divisibleByLast(n) {
+  return n.toString().split('').map((y, index, array) => (y % array[index-1]) === 0);
+}
