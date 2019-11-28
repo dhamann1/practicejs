@@ -340,3 +340,11 @@ function validateUser(username) {
 function divisibleByLast(n) {
   return n.toString().split('').map((y, index, array) => (y % array[index-1]) === 0);
 }
+
+// If　a = 1, b = 2, c = 3 ... z = 26
+
+function wordsToMarks (string) {
+  return string.split("").reduce((acc, char) => {
+    return acc + char.charCodeAt() - 96; 
+  }, 0); 
+}
