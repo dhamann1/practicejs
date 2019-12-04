@@ -354,3 +354,29 @@ function wordsToMarks (string) {
 String.prototype.digit = function() {
   return /^[0-9]$/.test(this);
 };
+
+// Note: If the count exceed 3 please return 'You need extra sleep'.
+// The list of events can contain the following:
+// You come here, to solve some kata ('cw').
+// You have a dog or a cat that just decide to wake up too early ('dog' | 'cat').
+// You just watch a movie ('movie').
+// Other events can be present and it will be represent by arbitrary string, just ignore this one.
+// Each event can be downcase/lowercase, or uppercase. If it is downcase/lowercase you need 1 coffee by events and if it is uppercase you need 2 coffees.
+
+function howMuchCoffee(events) {
+  var count = 0;
+  events.forEach((el) => {
+    if(/^(CW|CAT|DOG|MOVIE)$/.test(el)){
+      count += 2;
+    }
+    if(/^(cw|cat|dog|movie)$/.test(el)){
+      count ++;
+    }
+  });
+  if(count > 3){
+    return 'You need extra sleep';
+  }
+  return count;
+}
+
+
