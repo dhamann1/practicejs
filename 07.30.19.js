@@ -380,3 +380,8 @@ function howMuchCoffee(events) {
 }
 
 
+//Vowel String Method 
+
+String.prototype.vowel = function() {
+  return /^[aeiou]$/i.test(this);
+}
