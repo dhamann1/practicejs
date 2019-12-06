@@ -385,3 +385,14 @@ function howMuchCoffee(events) {
 String.prototype.vowel = function() {
   return /^[aeiou]$/i.test(this);
 }
+
+// Write a function that takes a positive integer n, sums all the cubed values from 1 to n, and returns that sum.
+
+function sumCubes(n){
+  var sum = 0;
+  while(n > 0) {
+    sum += n**3;
+    n--;
+  }
+  return sum;
+}
