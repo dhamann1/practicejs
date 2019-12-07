@@ -396,3 +396,19 @@ function sumCubes(n){
   }
   return sum;
 }
+
+// Given a mixed array of number and string representations of integers, add up the string integers and subtract this from the total of the non-string integers.
+
+function divCon(x) {
+  var sum = 0;
+  for (let i = 0; i < x.length; i++) {
+    var n = x[i];
+    if (Number.isInteger(n)){
+      sum += n;
+    }
+    else {
+      sum -= parseInt(n);
+    }
+  }
+  return sum;
+}
