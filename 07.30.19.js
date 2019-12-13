@@ -412,3 +412,9 @@ function divCon(x) {
   }
   return sum;
 }
+
+//isLetter String method 
+
+String.prototype.isLetter = function() {
+  return /^[A-Za-z]$/.test(this)
+}
