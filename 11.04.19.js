@@ -66,3 +66,9 @@ function humanYearsCatYearsDogYears(humanYears) {
   }
   return [humanYears, catYears, dogYears];
 }
+
+// Return true if given object consists exclusively of zero or more whitespace characters, false otherwise.
+
+String.prototype.whitespace=function(){
+  return this.trim() === '';
+}
