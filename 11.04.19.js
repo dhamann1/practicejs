@@ -72,3 +72,11 @@ function humanYearsCatYearsDogYears(humanYears) {
 String.prototype.whitespace=function(){
   return this.trim() === '';
 }
+
+
+
+// Write a function calculating distance between Point a and Point b. Point objects have x and y attributes
+
+function distanceBetweenPoints(a, b) {
+  return Math.hypot(a.x - b.x, a.y - b.y);
+}
