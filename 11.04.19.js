@@ -80,3 +80,15 @@ String.prototype.whitespace=function(){
 function distanceBetweenPoints(a, b) {
   return Math.hypot(a.x - b.x, a.y - b.y);
 }
+
+
+function lottery(str){
+  return str.split('').filter((a, i, arr) => !isNaN(a) && arr.indexOf(a) === i).join('') || "One more run!";
+}
+
+// Your task is to write an update for a lottery machine. Its current version produces a sequence of random letters and integers (passed as a string to the function lottery()). Your code inside lottery() must filter out all letters and return unique integers as a string. If there are no integers in the string return - “One more run!”.
+
+function lottery(str){
+  str = str.replace(/[a-z]/gi, '');
+  return str.length > 0 ? str.split('').filter((value, index) => str.indexOf(value) == index).join('') : "One more run!";
+}
