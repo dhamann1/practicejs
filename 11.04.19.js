@@ -92,3 +92,13 @@ function lottery(str){
   str = str.replace(/[a-z]/gi, '');
   return str.length > 0 ? str.split('').filter((value, index) => str.indexOf(value) == index).join('') : "One more run!";
 }
+
+// Complete the function that takes two integers (a, b, where a < b) and return an array of all integers between the input parameters, including them.
+
+function between (a, b) {
+  var list = []; 
+  for(var i = a; i <= b; i++) {
+    list.push(i);
+  }
+  return list; 
+} 
