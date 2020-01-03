@@ -102,3 +102,9 @@ function between (a, b) {
   }
   return list; 
 } 
+
+// Create a function isDivisible(n,...) that checks if the first agrument n is divisible by all other arguments (return true if no other arguments)
+
+function isDivisible(n,...args){
+  return args.every(x => n % x === 0)
+}
