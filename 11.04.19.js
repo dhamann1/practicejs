@@ -108,3 +108,8 @@ function between (a, b) {
 function isDivisible(n,...args){
   return args.every(x => n % x === 0)
 }
+
+
+// Given an integral number of watermelons w (1 ≤ w ≤ 100; 1 ≤ w in Haskell), check whether Pete and Billy can divide the melons so that each of them gets an even amount.
+
+const divide = weight => weight >= 4 && weight % 2 === 0; 
