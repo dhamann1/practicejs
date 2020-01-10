@@ -113,3 +113,30 @@ function isDivisible(n,...args){
 // Given an integral number of watermelons w (1 ≤ w ≤ 100; 1 ≤ w in Haskell), check whether Pete and Billy can divide the melons so that each of them gets an even amount.
 
 const divide = weight => weight >= 4 && weight % 2 === 0; 
+
+// A person contradicts Mary's belief if one of the following statements is true:
+// they are young and beautiful but not loved;
+// they are loved but not young or not beautiful.
+// Example
+// For young = true, beautiful = true and loved = true, the output should be false.
+// Young and beautiful people are loved according to Mary's belief.
+// For young = true, beautiful = false and loved = true, the output should be true.
+// Mary doesn't believe that not beautiful people can be loved.
+// Input/Output
+// [input] boolean young
+// [input] boolean beautiful
+// [input] boolean loved
+// [output] a boolean value
+// true if the person contradicts Mary's belief, false otherwise.
+
+function willYou (young, beautiful, loved) {
+  if ((young && beautiful && loved) || (!young && !beautiful && !loved)) {
+    return false;
+  } else if (young && beautiful) {
+    return true;
+  } else if (!loved) {
+    return false;
+  } else {
+    return true;
+  }
+}
