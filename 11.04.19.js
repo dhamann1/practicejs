@@ -156,3 +156,16 @@ function houseNumbersSum(inputArray) {
     sum += inputArray[i];
   }
 }
+
+// Output should be the length of the longest word, as a number.
+
+function findLongest(str) {
+  var strSplit = str.split(" ");
+  var longest = 0;
+  for (var i = 0; i < strSplit.length; i++) {
+    if (strSplit[i].length > longest) {
+      longest = strSplit[i].length;
+      }
+    }
+    return longest;
+}
