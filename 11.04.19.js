@@ -172,10 +172,10 @@ function findLongest(str) {
 
 // -If Alex gets 10 or more hoops, return the string "Great, now move on to tricks".
 // -If he doesn't get 10 hoops, return the string "Keep at it until you get it".
+
 const hoopCount = n => (n < 10) ? 'Keep at it until you get it' : 'Great, now move on to tricks';
 
-
-Find the sum of all multiples of n below m
+// Find the sum of all multiples of n below m
 
 function sumMul(n,m){
   var sum = 0; 
@@ -189,3 +189,8 @@ function sumMul(n,m){
 }
 
 
+// So you want to write a function that takes an array of pairs of login-names and e-mails, and outputs an array of all login-name, e-mails-pairs from the login-names that end with "_".
+
+function searchNames( logins ){
+  return logins.filter(login => {return login[0].slice(-1) === '_' });
+}
