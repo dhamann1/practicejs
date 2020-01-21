@@ -188,4 +188,10 @@ function sumMul(n,m){
   return sum;
 }
 
+Reverse a string while maintaining spaces
 
+function stringReversal(s){
+  var a = s.split(" "); 
+  var arr = a.join("").split("").reverse();
+  return a.map(str => arr.splice(0, str.length).join("")).join(" ");
+}
