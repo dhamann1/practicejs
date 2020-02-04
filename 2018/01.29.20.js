@@ -9,3 +9,11 @@ function jumpingNumber(n){
     }
     return "Jumping!!";
   }
+
+// Removes duplicates from an array of numbers and returns it as a result. 
+
+function distinct (x) {
+    return x.filter(function (item, index){
+        return x.indexOf(item) == index; 
+    });
+}
