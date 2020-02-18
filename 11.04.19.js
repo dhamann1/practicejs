@@ -190,15 +190,24 @@ function sumMul(n,m){
 
 Reverse a string while maintaining spaces
 
-<<<<<<< HEAD
 // So you want to write a function that takes an array of pairs of login-names and e-mails, and outputs an array of all login-name, e-mails-pairs from the login-names that end with "_".
 
 function searchNames( logins ){
   return logins.filter(login => {return login[0].slice(-1) === '_' });
-=======
+}
+  
 function stringReversal(s){
   var a = s.split(" "); 
   var arr = a.join("").split("").reverse();
   return a.map(str => arr.splice(0, str.length).join("")).join(" ");
->>>>>>> 2846edf08405796dfcbb50dd181bd324b76308fc
+}
+
+// Write a function that given an American floor (passed as an integer) returns the real floor.
+// Moreover, your function should work for basement floors too: just return the same value as the passed one.
+
+function getRealFloor(n) {
+  if (n <= 0) {
+    return n;
+  }
+  return n - (n >= 13 ? 2 : 1);
 }
