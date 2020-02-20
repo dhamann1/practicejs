@@ -211,3 +211,18 @@ function getRealFloor(n) {
   }
   return n - (n >= 13 ? 2 : 1);
 }
+
+
+// Check if a number is polydivisible or not. 
+
+function polydivisible(x) {
+  var y = x.toString()
+    for (var i = 1; i <= y.length; i++) {
+      var value = y.slice(0, i)
+      if (parseInt(value) % i === 0) {
+      } else {
+        return false;
+      }
+    }
+    return true ;
+  }
