@@ -226,3 +226,8 @@ function polydivisible(x) {
     }
     return true ;
   }
+
+// Clock shows 'h' hours, 'm' minutes and 's' seconds after midnight.
+// Your task is to make 'Past' function which returns time converted to milliseconds.
+
+const past = (h,m,s) => 1000 * (3600 * h + 60 * m + s);
