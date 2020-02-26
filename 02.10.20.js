@@ -14,3 +14,13 @@ function paperwork(n, m) {
     }
     return m * n;
   }
+
+
+// Write a function ageInDays which returns your age in days.
+
+function ageInDays(year, month, day){
+  var today = new Date();
+  var bday = new Date(year, month-1, day);
+  var days = (today-bday)/86400000;
+  return "You are " + Math.floor(days) + " days old";
+}
