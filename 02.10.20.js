@@ -18,9 +18,17 @@ function paperwork(n, m) {
 
 // Write a function ageInDays which returns your age in days.
 
-function ageInDays(year, month, day){
+function ageInDays(year, month, day) {
   var today = new Date();
   var bday = new Date(year, month-1, day);
   var days = (today-bday)/86400000;
   return "You are " + Math.floor(days) + " days old";
 }
+
+// add() gets anywhere between 0 and 100 arguments (Integers) and returns their sum.
+
+var add = function (...n) {
+  return n.reduce(function(a,b){
+    return a + b;
+  }, 0);
+};
