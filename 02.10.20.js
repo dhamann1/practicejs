@@ -43,3 +43,11 @@ function differenceInAges(ages){
   })
   return [ages[0], ages[ages.length -1], ages[ages.length -1] - ages[0]]
   }
+
+  // Create a function that will return a string that combines all of the letters of the three inputed strings in groups. Taking the first letter of all of the inputs and grouping them next to each other. Do this for every letter, see example below!
+
+function tripleTrouble (one, two, three) {
+  return one.split("").map(function(letter,index){
+    return letter + two[index] + three[index]
+  }).join("");
+}
