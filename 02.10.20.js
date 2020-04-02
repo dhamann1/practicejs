@@ -51,3 +51,19 @@ function tripleTrouble (one, two, three) {
     return letter + two[index] + three[index]
   }).join("");
 }
+
+
+// Write a function that accepts two arguments: an array/list of integers and another integer (n).
+// Determine the number of times where two integers in the array have a difference of n.
+
+function intDiff (arr, n){
+  var count = 0;
+  for (var i = 0; i < arr.length; i++){
+    for (var x = i + 1; x < arr.length; x++){
+      if(Math.abs(arr[i] - arr[x]) == n){
+        count++; 
+      }
+    }
+  }
+  return count;
+}
