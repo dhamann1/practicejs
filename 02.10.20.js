@@ -73,3 +73,10 @@ function intDiff (arr, n){
 function arrayMadness(a, b) {
   return a.reduce((sum1,x1) => sum1 + x1 **2,0) > b.reduce((sum2,x2) => sum2 + x2 **3,0);
   }
+
+// Implement a function that returns the minimal and the maximal value of a list.
+
+function getMinMax(arr) {
+  arr.sort((a,b)=>a-b); 
+  return [arr[0], arr[arr.length-1]]; 
+}
