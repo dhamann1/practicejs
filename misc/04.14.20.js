@@ -47,3 +47,11 @@ function missingValues(arr) {
     }
     return sum;
   }
+
+
+  // function getSumOfDigits that takes positive integer to calculate sum of it's digits. Assume that argument is an integer.
+  
+  function getSumOfDigits(integer){
+    return integer.toString().split("").map(x => parseInt(x)).reduce((x,y) => x +y);  
+   }
+   
