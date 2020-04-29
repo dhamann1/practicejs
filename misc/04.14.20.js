@@ -55,3 +55,14 @@ function missingValues(arr) {
     return integer.toString().split("").map(x => parseInt(x)).reduce((x,y) => x +y);  
    }
    
+
+  //  Write a function that accepts two arguments and generates a sequence containing the integers from the first argument to the second inclusive.
+
+  function generateIntegers (m,n) {
+    let arr = []; 
+    while(m <= n) {
+      arr.push(m);
+      m++; 
+    }
+    return arr; 
+    }
