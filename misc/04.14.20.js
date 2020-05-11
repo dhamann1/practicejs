@@ -73,3 +73,9 @@ function missingValues(arr) {
     function myLanguages(a) {
       return Object.keys(a).filter(x => a[x] >= 60).sort((x, y) => a[y] - a[x])
   }
+
+// This function takes two numbers as parameters, the first number being the coefficient, and the second number being the exponent. Your function should multiply the two numbers, and then subtract 1 from the exponent. Then, it has to print out an expression (like 28x^7).
+
+  function derive (coefficient,exponent) {
+    return `${coefficient*exponent}x^${exponent-1}`
+  }
