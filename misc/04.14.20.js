@@ -79,3 +79,13 @@ function missingValues(arr) {
   function derive (coefficient,exponent) {
     return `${coefficient*exponent}x^${exponent-1}`
   }
+
+  // Implement a function, which returns an array of the first m multiples of the real number n.
+
+  function multiples(m, n){
+    var arr = [];
+    for (var i = 1; i <= m; i++){
+      arr.push(n*i);
+    }
+    return arr;
+  }
