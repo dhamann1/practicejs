@@ -15,3 +15,10 @@ function capital (capitals) {
   function lastName(name) {
     return name.split(' ')[1];
   }
+
+  // Given two strings a and b and your task will be to return the characters that are not common in the two strings.
+
+
+  function uniqueString(a,b){
+    return (a+b).split("").filter(x => !a.includes(x) || !b.includes(x)).join("");
+   };
