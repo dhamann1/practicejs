@@ -18,7 +18,14 @@ function capital (capitals) {
 
   // Given two strings a and b and your task will be to return the characters that are not common in the two strings.
 
-
   function uniqueString(a,b){
     return (a+b).split("").filter(x => !a.includes(x) || !b.includes(x)).join("");
    };
+
+  //  Given a series of numbers as a string, determine if the number represented by the string is divisible by three.
+   
+  function divisibleByThree(str){
+    var sum = 0; 
+    str.split("").map(x => sum += parseInt(x));
+    return sum % 3 === 0; 
+  }
