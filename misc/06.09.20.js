@@ -11,3 +11,22 @@ function getDrinkByProfession(param){
     }
     return list[param.toLowerCase()]||"Beer";
 }
+
+// Given an array of strings and your task is to remove all consecutive duplicate letters from each string in the array.
+
+function stringDuplicateRemoval(s) {
+    var newArray = [];
+    s.forEach(word => {
+      var last = ""; 
+      var result = ""; 
+      for (var i = 0; i < word.length; i++){
+        var char = word.charAt(i); 
+        if (char !== last){
+          result += char; 
+          last = char;
+        }
+      }
+      newArray.push(result); 
+    })
+    return newArray; 
+    };
