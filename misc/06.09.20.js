@@ -48,3 +48,13 @@ function quarterOf (month) {
       return 4
     }
   } 
+
+//  Capitalise the first letter of the first word of each sentence.
+
+function capitalizeFirstLetter(paragraph) {
+    if (paragraph === "") {
+        return "";
+    } else {
+        return paragraph.split('. ').map(word => word[0].toUpperCase() + word.slice(1)).join('. ')
+    }
+}
