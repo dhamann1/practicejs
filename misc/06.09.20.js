@@ -58,3 +58,21 @@ function capitalizeFirstLetter(paragraph) {
         return paragraph.split('. ').map(word => word[0].toUpperCase() + word.slice(1)).join('. ')
     }
 }
+
+// Given an array of integers whose elements have both a negative and a positive value, except for one integer that is either only negative or only positive. Your task will be to find that integer.
+
+function findNum(arr) {
+    var soloNum = 0;
+    arr.forEach(number => {
+      if (arr.indexOf(-number) == -1){
+        soloNum = number; 
+      }
+    })
+    return soloNum; 
+  }
+
+  function findNum(arr) {
+    for (var i=0; i<arr.length; ++i)
+      if (arr.indexOf(-arr[i])==-1)
+        return arr[i];
+  }
