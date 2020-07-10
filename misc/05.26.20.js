@@ -29,3 +29,14 @@ function capital (capitals) {
     str.split("").map(x => sum += parseInt(x));
     return sum % 3 === 0; 
   }
+
+  // Given a paragraph that does not use capital letters. Your job is to capitalise the first letter of the first word of each sentence.
+  
+  function capitalizeWord(paragraph){
+    if (paragraph == '') {
+      return '';
+    } else {
+      return paragraph.split('. ').map(word => word[0].toUpperCase() + word.slice(1)).join('. ') 
+    }
+  }
+  
