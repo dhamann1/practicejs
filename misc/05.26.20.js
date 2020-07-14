@@ -39,4 +39,11 @@ function capital (capitals) {
       return paragraph.split('. ').map(word => word[0].toUpperCase() + word.slice(1)).join('. ') 
     }
   }
+
+  function findMultiples(integer,limit){
+    var resultList = []
+    for (var i = integer; i<=limit; i+=integer)
+      resultList.push(i) 
+      return resultList;
+  }
   
