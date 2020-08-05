@@ -46,4 +46,11 @@ function capital (capitals) {
       resultList.push(i) 
       return resultList;
   }
+
+  // Reverse the portion of that string between those two indices inclusive.
+
+  function stringChallenge(string, a, b) {
+    return string.slice(0, a) + string.slice(a, b + 1).split('').reverse().join('') + string.slice(b + 1)
+  }
+  
   
