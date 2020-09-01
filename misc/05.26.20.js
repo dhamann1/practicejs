@@ -83,3 +83,14 @@ function dominator(arr) {
   }
   return -1; 
 } 
+
+// Write a function called getMissingElement that accepts an array of unique integers between 0 and 9 (inclusive), and returns the missing element.
+
+function getMissingElement(superImportantArray){
+  superImportantArray.sort();
+  for(var i = 0; i < 10; i++){
+    if (superImportantArray[i] !== i) {
+      return i; 
+    }
+  }
+}
