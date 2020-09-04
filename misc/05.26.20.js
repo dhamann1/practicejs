@@ -94,3 +94,19 @@ function getMissingElement(superImportantArray){
     }
   }
 }
+
+var runningSum = function(nums) {
+  var sum = 0;
+  var sumNum = [];
+  nums.forEach(num => {
+      sumNum.push(sum += num);
+  })
+  return sumNum; 
+};
+
+var runningSum = (nums) => {
+  var sum = 0;
+  return nums.map(num => {
+      return sum += num; 
+  })
+}
