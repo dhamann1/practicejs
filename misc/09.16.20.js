@@ -16,3 +16,9 @@ var removeElement = function(nums, val) {
     }
     return a;   
 };
+
+// Given an array nums of integers, return how many of them contain an even number of digits.
+
+function findNumbers (nums) {
+    return nums.filter(x => x.toString().length % 2 == 0).length; 
+}
